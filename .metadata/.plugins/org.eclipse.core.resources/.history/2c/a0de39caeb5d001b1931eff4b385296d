@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class BankFunc {
+	int amount;
+	
+	public addAmount() {
+		
+	}
+	public minusAmout() {
+		
+	}
+}

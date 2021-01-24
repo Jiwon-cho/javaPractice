@@ -1,0 +1,21 @@
+package kh.vari.funtion;
+
+import java.util.Scanner;
+
+public class VariExample {
+	public void Example() {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("정수1를 입력하시오: ");
+		int su1=sc.nextInt();
+		System.out.print("정수2를 입력하시오: ");
+		int su2=sc.nextInt();
+		int mul=su1+su2;
+		int mi=su1-su2;
+		int x=su1*su2;
+		int di=su1/su2;
+		System.out.print("" +mul+ " "+mi+" "+x+" "+di);
+		
+		
+	}
+
+}

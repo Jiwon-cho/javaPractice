@@ -1,0 +1,22 @@
+package com.vari.controller;
+
+public class CastingTest {
+	static public void main(String[] args) {
+		//자동 형 변환 작은범위 자료형에서 큰 범위 자료형으로 변경 될 때
+		//데이터 손실이 없기 때문에 가능, 그렇기 때문에 반대는 안됌> 데이터 손실이 있기 때문에
+		long lnum=100;
+		double dnum=lnum;
+		System.out.println(dnum);
+		//+연산시에도 자료형은 같아야함.
+		//연산시에 자료형이 다를 때는 더 큰 자료형에 맞춰서 자동형변환
+		System.out.println(10+30.5);
+		double temp;
+		temp=100;
+		int name=(int)temp;
+		System.out.println(temp);
+		
+
+		
+	}
+
+}

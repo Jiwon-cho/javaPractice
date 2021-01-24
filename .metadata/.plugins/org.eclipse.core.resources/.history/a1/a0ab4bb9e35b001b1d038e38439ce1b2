@@ -1,0 +1,17 @@
+package com.control.run;
+
+import com.conditnion.controller.ConditionController;
+
+public class Main {
+	public static void main(String[] args) {
+		new ConditionController().ifTest();
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

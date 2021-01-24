@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.op.controller.OperatorController"/>
+    <fullyQualifiedTypeName name="com.cal.controller.CalController"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.repeat.controller.REpeatController"/>
+    <fullyQualifiedTypeName name="com.kh.practice.func.OperatorPractice"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="kh.vari.funtion.VariExample"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
+    <fullyQualifiedTypeName name="com.kh.practice.run.Run"/>
+</qualifiedTypeNameHistroy>

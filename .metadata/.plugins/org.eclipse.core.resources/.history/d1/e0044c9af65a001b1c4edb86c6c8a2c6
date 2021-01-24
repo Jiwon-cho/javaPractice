@@ -1,0 +1,22 @@
+package com.vari.controller;
+
+public class InputOutputTest {
+	
+	public static void main(String[] args) {
+		//print()매소드 사용해보기
+		int num=100;
+	    String name="조지원";
+	    System.out.print(num);
+	    System.out.print(name);
+	    System.out.println();//개행하기 
+	    System.out.println(num);
+	    System.out.println(name);
+	    
+	    //printf 매소드 사용하기
+	    System.out.printf("%d%s", num,name);
+	    
+	    
+	    
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.repeat.controller;
+
+public class REpeatController {
+	
+	public void basicFor() {
+		//기본 for 문 이용하기
+//		for(int i=1;i<=8;i++) {
+//			System.out.println("묭묭이");
+//			
+//		}
+//		
+//		for(int i=1;i<=5;i++) {
+//			System.out.println(i);
+//		}
+//		for(int i=1;i<=5;i+=3) {
+//			System.out.println("나다");
+//		}
+	
+		//for 문을 이용해서 1부터 100까지 출력하기
+		for(int i=1;i<=100;i++) {
+			if(i/2==0) {
+				System.out.print(i);
+			}
+			
+			
+		}
+	
+	}
+
+}

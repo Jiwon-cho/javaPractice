@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class BankFunc {
+	int amount;
+	
+	//입금
+	public int addAmount() {
+		
+	}
+	//출금
+	public int minusAmout() {
+		
+	}
+	public void wa() {
+		System.out.println(this.amout);
+	}
+}

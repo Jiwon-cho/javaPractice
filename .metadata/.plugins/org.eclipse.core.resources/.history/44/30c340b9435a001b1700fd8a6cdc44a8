@@ -1,0 +1,39 @@
+package com.vari.controller;
+
+public class VariableUse {
+	public static void main(String[] args) {
+		int age;
+		age=10;
+		String c="abcc";
+		long a = 1000;
+	    a = 111111111111111111L;
+	    
+	    double dnum;
+	    dnum=180.15;
+	    float fnum;
+	    fnum=189.5f;
+	    
+	    byte bnum;
+	    bnum=100;
+	    short snum;
+	    snum=-1000;
+	    
+	    char cho;
+	    cho='A';
+	    
+	    String str;
+	    str="Askj";
+	    System.out.println(str);
+	    System.out.println(bnum);
+	    
+	    	
+	    
+	    
+		
+				
+		
+		
+		System.out.println(age);
+	}
+
+}
