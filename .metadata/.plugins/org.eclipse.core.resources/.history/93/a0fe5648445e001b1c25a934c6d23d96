@@ -1,0 +1,7 @@
+import java.util.*;
+//議곗� 怨꾩쥖
+public class BankFunc {
+	int amount;
+	
+String a = "안녕하세요";
+}

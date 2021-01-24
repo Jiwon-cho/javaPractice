@@ -2,27 +2,15 @@ package com.kh.practice.func;
 
 import java.util.Scanner;
 
-//기능의 집합 객체
+
 public class OperatorPractice {
-	//필드변수(field)
-	int  var;  // 클래스에서 생기는 필드변수 -> 
-	
-	
-	//싱글톤
-	//생성자  (Contructor) -객체의 초기화
-	public OperatorPractice(int var) { //매개변수(지역변수) ,Local var var
-		this.var = var;//조지원 amout를 계산해주는 메소드;		
-		System.out.println("지금 들어온 변수는 "+this.var);
-		
-		//객체를 한번만 생성하기 위해서
-					
-	}
-	// 필드메소드
+
 	//실습 문제 1
 	public void practice1() {
-//		Scanner sc=new Scanner(System.in);
-//		System.out.print("정수를 입력하시오: ");
-		int su =(int)this.var;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("정수를 입력하시오: ");
+		int su=sc.nextInt();
+
 		if(su>0) {
 			System.out.println("양수다");
 		}else {
@@ -32,10 +20,10 @@ public class OperatorPractice {
 
    //실습 문제 2
 	public void practice2() {
-//	   Scanner sc=new Scanner(System.in);
-//	   System.out.print("정수를 입력하시오: ");
-//	   int su=sc.nextInt();
-	   int su =(int)this.var;
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("정수를 입력하시오: ");
+	   int su=sc.nextInt();
+	  
 	   if(su>0) {
 		   System.out.println("양수다");
 		   
@@ -49,10 +37,10 @@ public class OperatorPractice {
    }
    //실습 문제3
 	public void	practice3() {
-//    	Scanner sc=new Scanner(System.in);
-//    	System.out.print("정수를 입력하시오: ");
-//    	int su=sc.nextInt();
-		int su =(int)this.var;
+    	Scanner sc=new Scanner(System.in);
+    	System.out.print("정수를 입력하시오: ");
+    	int su=sc.nextInt();
+		
         if((su%2)==0) {
         	System.out.print("짝수다");
         }else if((su%2)==1) {
@@ -184,46 +172,56 @@ public class OperatorPractice {
 	//실습 문제11
 	public void practice11() {
 		Scanner sc=new Scanner(System.in);	
-		double[] bonus = {1.4,1.0,1.15};
-		char [] person = {'A','B','C'};
-								
-		for(int i=0;i<3;i++) {
-			System.out.print(person[i]+"사원의 연봉: ");
-			int realMoney= sc.nextInt();
-			double realPlus=realMoney*bonus[i];
-						
-			if(realMoney>=3000) {
-				System.out.println(person[i]+"사원의 연봉/연봉+a: "+realMoney+"/"+realPlus+"\n3000 이상");
-				}else {
-				System.out.println(person[i]+"사원의 연봉/연봉+a: "+realMoney+"/"+realPlus+"\n3000 미만");
-			}
+//		double[] bonus = {1.4,1.0,1.15};
+//		char [] person = {'A','B','C'};
+//								
+//		for(int i=0;i<3;i++) {
+//			System.out.print(person[i]+"사원의 연봉: ");
+//			int realMoney= sc.nextInt();
+//			double realPlus=realMoney*bonus[i];
+//						
+//			if(realMoney>=3000) {
+//				System.out.println(person[i]+"사원의 연봉/연봉+a: "+realMoney+"/"+realPlus+"\n3000 이상");
+//				}else {
+//				System.out.println(person[i]+"사원의 연봉/연봉+a: "+realMoney+"/"+realPlus+"\n3000 미만");
+//			}
 			
+		
+		//조금 더 효율적인 코드를 만들어 보기 위해 따로 찾아서 이런 식으로도 코드를 만들어 보았습니다.
+      System.out.print("A사원의 연봉: ");
+	   int a=sc.nextInt();
+	   System.out.print("B사원의 연봉: ");
+		int b=sc.nextInt();
+	   System.out.print("C사원의 연봉: ");
+	   int c=sc.nextInt();
+	   double reala=1.4*a;
+       double realb=b;
+	   double realc=1.15*c;	
+		
+		
+		if(reala>=3000) {
+			System.out.println("A사원의 연봉/연봉+a: "+a+"/"+reala+"\n3000 이상");
+			
+			
+		}else {
+			System.out.println("A사원의 연봉/연봉+a: "+a+"/"+reala+"\n3000 미만");
 		}
 		
+		if(realb>=3000) {
+			System.out.println("B사원의 연봉/연봉+a: "+b+"/"+realb+"\n3000 이상");
+			
+			
+		}else {
+			System.out.println("B사원의 연봉/연봉+a: "+b+"/"+realb+"\n3000 미만");
+		}
 		
-//		if(reala>=3000) {
-//			System.out.println("A사원의 연봉/연봉+a: "+a+"/"+reala+"\n3000 이상");
-//			
-//			
-//		}else {
-//			System.out.println("A사원의 연봉/연봉+a: "+a+"/"+reala+"\n3000 미만");
-//		}
-//		
-//		if(realb>=3000) {
-//			System.out.println("B사원의 연봉/연봉+a: "+b+"/"+realb+"\n3000 이상");
-//			
-//			
-//		}else {
-//			System.out.println("B사원의 연봉/연봉+a: "+b+"/"+realb+"\n3000 미만");
-//		}
-//		
-//		if(realc>=3000) {
-//			System.out.println("C사원의 연봉/연봉+a: "+c+"/"+realc+"\n3000 이상");
-//			
-//			
-//		}else {
-//			System.out.println("C사원의 연봉/연봉+a: "+c+"/"+realc+"\n3000 미만");
-//		}	
+		if(realc>=3000) {
+			System.out.println("C사원의 연봉/연봉+a: "+c+"/"+realc+"\n3000 이상");
+			
+			
+		}else {
+			System.out.println("C사원의 연봉/연봉+a: "+c+"/"+realc+"\n3000 미만");
+		}	
 	}
 	
 	
