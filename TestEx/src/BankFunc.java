@@ -3,5 +3,5 @@ import java.util.*;
 public class BankFunc {
 	int amount;
 	
-
+String a = "조지바보";
 }
