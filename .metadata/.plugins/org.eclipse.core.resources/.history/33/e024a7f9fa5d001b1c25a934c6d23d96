@@ -7,6 +7,5 @@ public class Bank {
 		b.addAmount(2000);
 		b.minusAmout(200);
 		b.Money();		
-		b.minusAmout(3000);
 	}
 }
