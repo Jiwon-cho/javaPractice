@@ -1,24 +1,7 @@
 import java.util.*;
-//Á¶Áö °èÁÂ
+//ì¡°ì§€ ê³„ì¢Œ
 public class BankFunc {
 	int amount;
 	
-	public BankFunc(int var) {
-		this.amount =var;
-		System.out.println("ÇöÀç °èÁÂ µ·Àº"+this.amount);
-	}
-	//ÀÔ±İ
-	public void addAmount(int var) {
-		this.amount = this.amount+var;
-		System.out.println("ÇöÀç °èÁÂ µ·Àº"+this.amount);
-	}
-	//Ãâ±İ
-	public void minusAmout(int var) {
-		this.amount = this.amount-var;
-		System.out.println("ÇöÀç °èÁÂ µ·Àº"+this.amount);
-	}
-	public void Money() {
-		System.out.println("ÇöÀç °èÁÂ µ·Àº"+this.amount);
-	}
-	
+
 }
