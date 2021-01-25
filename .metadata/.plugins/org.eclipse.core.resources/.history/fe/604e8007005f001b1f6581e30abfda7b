@@ -1,0 +1,238 @@
+package com.repeat.controller;
+
+import java.util.Scanner;
+
+public class REpeatController {
+	
+	public void basicFor() {
+		Scanner sc=new Scanner(System.in);	
+
+		//1부터 100까지 출력
+//		for(int i=1;i<=100;i++) {
+//			System.out.println(i);
+//		}
+//		
+//		//1부터 100까지 짝수 출력
+//		for(int i=2; i<=100;i+=2) {
+//			System.out.println(i);
+//		}
+//       //100부터 1까지 출력하기
+//		for(int i=100;i>0;i--) {
+//    	   System.out.println(i);
+//       }
+//       
+//        
+//		//1부터 100 다 더하기
+//		int sum=0;
+//		for(int i=1;i<=100;i++) {
+//			sum+=i;
+//    	   
+//    	   }
+//		System.out.println(sum);
+//    	    
+//    	
+//		//1부터 100 홀수 값만 더하기
+//		int sum2=0;
+//		for(int i=1;i<=100;i+=2) {
+//			sum2+=i;
+//		}
+//		System.out.println(sum2);
+//		
+	  //for 문 활용하기
+		String msg="";
+		for(;!msg.equals("0");) {
+			System.out.println(msg);
+			msg=sc.next();
+		}
+		for(;;) {
+			System.out.println("무한루프");
+		}
+       
+	
+	
+	}
+	public void Student() {
+		Scanner sc=new Scanner(System.in);	
+	for(int i=0;i<5;i++) {
+		sc.nextLine();// 요렇게 하면 처음에 이거 입력 받아서 깜박댐
+		/*if(i!=1){
+		 * sc.nextLine(); 이런식으로 해야됨
+		*/
+		
+		System.out.print("이름: ");
+		String name=sc.next();
+		System.out.print("나이: ");
+		int age=sc.nextInt();
+		System.out.print("학년: ");
+		int grade=sc.nextInt();
+		System.out.println("반: ");
+		int group=sc.nextInt();
+		System.out.println("번호: ");
+		int number=sc.nextInt();
+		System.out.println(name+age+group+number);
+	}
+	}
+	public void ExtraFor() {
+		//사용자에게 반복횟수를 입력받아
+		//그 횟수만큼 자바 화이팅을 출력
+	Scanner sc=new Scanner(System.in);
+//		System.out.print("반복 횟수를 입력 하시오: ");
+//		int su=sc.nextInt();
+//		for(int i=0;i<su;i++) {
+//			System.out.println("자바 화이팅");
+////		}
+//		System.out.print("학생 수를 입력 하시오: ");
+//		int su2=sc.nextInt();
+//		String stu="";
+//		for(int i=0;i<su2;i++) {
+//			System.out.print("이름: ");
+//			String name=sc.next();
+//			System.out.print("나이: ");
+//			int age=sc.nextInt();
+//			System.out.print("학년: ");
+//			int grade=sc.nextInt();
+//			System.out.println("반: ");
+//			int group=sc.nextInt();
+//			System.out.println("번호: ");
+//			int number=sc.nextInt();
+//			stu+=name+age+group+number+"\n";
+//			System.out.println(name+age+group+number);
+//		}
+//		System.out.println(stu);
+		
+		System.out.println("학생수?: ");
+		int su=sc.nextInt();
+		int sum=0;
+		int aver=0;
+		for(int i=0;i<su;i++) {
+			int sum2=0;
+			System.out.print("국어 점수를 입력하시오: ");
+			sum2+=sc.nextInt();
+			System.out.print("수학 점수를 입력하시오: ");
+			sum2+=sc.nextInt();
+			System.out.print("영어 점수를 입력하시오: ");
+			sum2+=sc.nextInt();
+			System.out.print("코딩 점수를 입력하시오: ");
+			sum2+=sc.nextInt();
+			sum+=sum2;
+			aver+=sum2/4;
+			System.out.println("합계: "+sum2+"\n평균: "+sum2/4);
+		
+			
+		}
+		aver=aver/su;
+		System.out.println("합계: "+sum+" 평균: "+aver);
+		
+		
+
+		
+	}
+	
+ public void Cal() {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("==계산기==");
+	 System.out.println("몇번 계산?: ");
+	 int count=sc.nextInt();
+	 for(int i=0;i<count;i++) { 
+	 System.out.println("수1: ");
+	 int su1=sc.nextInt();
+	 System.out.print("연산자: ");
+	 char op=sc.next().charAt(0);
+	 System.out.println("수2: ");
+	 int su2=sc.nextInt();
+	 switch(op) {
+	 case '+':System.out.println(su1+"+"+su2+"="+(su1+su2));break;
+	 case '-':System.out.println(su1+"-"+su2+"="+(su1-su2));break;
+	 case '*':System.out.println(su1+"*"+su2+"="+(su1*su2));break;
+	 case '/':System.out.println(su1+"/"+su2+"="+(su1/(double)su2));break;
+		 
+	 }
+	
+	 }
+ }
+ 
+ public void WhileTest() {
+//	 int i=0;
+//	 while(i<5) {
+//		 i++;
+//		 System.out.println("무야호~");
+//	 }
+	 //while: 무한반복,특정조건에서 반복문 종료할때
+//	 while(true) {
+//		 System.out.println("무한루프");
+//	 }
+	 Scanner sc= new Scanner(System.in);
+//	 String msg="";
+//	 while(!msg.equals("0")) {
+//		    msg=sc.nextLine();
+//		    System.out.println(msg);
+//	
+//	 System.out.println("====계산기====");
+//	 int cho=-1;
+//	 while(cho!=0) {
+//		 
+//		 System.out.println("수1: ");
+//		 int su1=sc.nextInt();
+//		 System.out.print("연산자: ");
+//		 char op=sc.next().charAt(0);
+//		 System.out.println("수2: ");
+//		 int su2=sc.nextInt();
+//		 switch(op) {
+//		 case '+':System.out.println(su1+"+"+su2+"="+(su1+su2));break;
+//		 case '-':System.out.println(su1+"-"+su2+"="+(su1-su2));break;
+//		 case '*':System.out.println(su1+"*"+su2+"="+(su1*su2));break;
+//		 case '/':System.out.println(su1+"/"+su2+"="+(su1/(double)su2));break;
+//			 
+//		 }
+//		 
+//	 }
+//		System.out.println("계속 하시게습니까?(1.y/0.n)");
+//		cho=sc.nextInt();
+//		
+//		int cho=0;
+//		do {
+//			System.out.println("실행하기!");
+//		}while(cho==1);
+//		cho
+//		while(cho==1) {
+//			System.out.println("while 실행");
+//		}
+	 
+	  do {
+		  System.out.println("1.김밤 1000\n"+"2.라면 1200\n"+"3.떡볶이 2000\n"+"4.순대 1500");
+		  System.out.println("선택: ");
+		  int cho=sc.nextInt(); 
+		  int total=0;
+		  
+	  }while(true);
+	 
+	 
+	 
+	 
+	
+	 
+		 
+		 }
+ public void forInfor() {
+	 //중첩 반복문 기본 회전
+	 //i,j 처럼 두개 다르게 써야함
+	 for(int i=0;i<10;i++) {
+		 System.out.println("외곽"+i);
+		 for(int j=0;j<5;j++) {
+			 System.out.print(j+" ");
+			 
+		 }
+		 
+	 }
+ }
+	 
+	 
+	 
+}       
+	
+	
+	
+
+   	
+
+
