@@ -9,9 +9,9 @@ public class Main {
 //		new REpeatController().Student();
 //		new REpeatController().ExtraFor();
 //		new REpeatController().Cal();		
-		new REpeatController().WhileTest();	
+//		new REpeatController().WhileTest();	
 //		new REpeatController().forInfor();
-		
+		new REpeatController().breakTest();
 		
 		
 		

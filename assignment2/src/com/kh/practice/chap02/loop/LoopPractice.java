@@ -106,31 +106,31 @@ public class LoopPractice {
 	public void practice7() {
 		Scanner sc = new Scanner(System.in);
 
-		int su3 = 0;
-		int su4 = 0;
+		int su1 = 0;
+		int su2 = 0;
 
 		do {
 			System.out.print("첫 번째 숫자: ");
-			int su1 = sc.nextInt();
+			su1 = sc.nextInt();
 			System.out.print("두 번째 숫자: ");
-			int su2 = sc.nextInt();
+			su2 = sc.nextInt();
 
-			su3 += su1;
-			su4 += su2;
-
+			
 			if (su1 > 0 && su2 > 0 && su1 > su2) {
-				for (int i = su1 - su2; i <= su1; i++) {
+				for (int i = su2; i <= su1; i++) {
 					System.out.print(i + " ");
 				}
 			} else if (su1 > 0 && su2 > 0 && su2 > su1) {
-				for (int i = su2 - su1; i <= su2; i++) {
+				for (int i =su1; i <= su2; i++) {
 					System.out.print(i + " ");
 				}
 
-			} else {
+			} else if(su1 > 0 && su2 > 0 && su2 == su1){
+				System.out.println("같은 수 입니다.");
+			}else {
 				System.out.println("1 이상의 숫자를 입력해주세요.");
 			}
-		} while (su3 <= 0 || su4 <= 0);
+		} while (su1 <= 0 || su2 <= 0);
 
 	}
 
@@ -304,7 +304,11 @@ public class LoopPractice {
 			System.out.println();
 			su--;
 		}
-
+		
+	}
+	public void practice15() {
+		
+		
 	}
 
 }

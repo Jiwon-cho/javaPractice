@@ -201,37 +201,39 @@ public class REpeatController {
 //		while(cho==1) {
 //			System.out.println("while 실행");
 //		}
-		
-		
-		
-		
-		int kim=0;
+
+		int kim = 0;
 
 		int total = 0;
-		String answer="";
+		String answer = "";
 		do {
 			System.out.println("1.김밤 1000\n" + "2.라면 1200\n" + "3.떡볶이 2000\n" + "4.순대 1500");
 			System.out.println("선택: ");
 			int cho = sc.nextInt();
-			
-			switch(cho) {
-			case 1: total+=1000;break;
-			
-			case 2: total+=1200;break;
-			case 3: total+=2000;break;
-			case 4: total+=1500;break;
+
+			switch (cho) {
+			case 1:
+				total += 1000;
+				break;
+
+			case 2:
+				total += 1200;
+				break;
+			case 3:
+				total += 2000;
+				break;
+			case 4:
+				total += 1500;
+				break;
 			}
 			System.out.println("계속 결제를 진행하십니까?(Y/N)");
-			answer=sc.next();
+			answer = sc.next();
 
-		} while (!answer.equals("N"));	
-		System.out.println("총합: "+total+" 입니다.");
+		} while (!answer.equals("N"));
+		System.out.println("총합: " + total + " 입니다.");
 
 	}
-	
 
-	     
-	
 	public void forInfor() {
 		Scanner sc = new Scanner(System.in);
 //	 
@@ -261,7 +263,7 @@ public class REpeatController {
 //			count = 0;
 //			System.out.println(msg.charAt(i));
 //			for (int j = 0; j < msg.length(); j++) {
-////			 System.out.print("apple".charAt(j)+" ");
+////			 System.out.print(msg.charAt(j)+" ");
 //				if (i != j && msg.charAt(i) == msg.charAt(j)) {
 //					System.out.print("같다 ");
 //					count++;
@@ -273,15 +275,65 @@ public class REpeatController {
 //			}
 //			System.out.println(msg.charAt(i) + "는 " + count + " 중복한다");
 //		}
-		//별찍기
+		// 별찍기
 //		for(int i=0;i<10;i++) {
 //			for(int j=0;j<10;j++) {
 //				System.out.print("*");
 //			}
 //			System.out.println();
 //		}
-		
 
+	}
+
+	public void breakTest() {
+		// break 문은 특정 조건에 반복문을 종료할 때 사용함.
+		// 보통 무한루프 설정한 반복문에서 많이 사용
+//		for(int i=0;;i++) {
+//			System.out.println("무한루프");
+//			if(i==10) {
+//				break;
+//			}
+//			
+//			
+//		}
+
+		Scanner sc = new Scanner(System.in);
+//		String msg="";
+//		while(true) {
+//			System.out.println("입력: ");
+//			String temp=sc.nextLine();
+//			msg+=temp+"\n";
+//			if(temp.equals("end")) {
+//				System.out.println(msg);
+//				break;
+//			}
+////		}
+//		here: // here: 뒤에꺼 끝내버림 아예
+//		for (int i = 2; i < 10; i++) {
+//			System.out.println("==== " + i + "단 ====");
+//			for (int j = 1; j < 10; j++) {
+//				System.out.println(i + "X" + j + "=" + i * j);
+//				if (j == 5) {
+//					break here;
+//				}
+//			}
+//		}
+		// continue 문 사용하기
+		// continue 문 아래 코드를 생략하고 반복문 실행하기
+		for(int i=2;i<10;i++) {
+			System.out.println("==== "+i+"단 ====");
+		    for(int j=1;j<10;j++) {
+		    	
+		    	if(j==5) {
+		    		continue;
+		    	}
+		    	System.out.println(i+"X"+j+"="+i*j);
+		    }
+		}
+	
+	
+	
+	
 	}
 
 }
