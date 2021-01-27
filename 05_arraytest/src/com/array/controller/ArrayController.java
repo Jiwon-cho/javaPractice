@@ -92,16 +92,18 @@ public class ArrayController {
 		boolean f=false;
 		System.out.println("취미?: ");
 		String hb=sc.next();
+		here:
 		for(int i=0;i<5;i++) {
 			if(hobby[i].equals(hb)){
 				
 				f=true;
 				break;
 				
+			
 			}
 				
 			
-			
+		
 		}System.out.println(f?"있다":"없다");
 		
 		
@@ -160,6 +162,47 @@ public class ArrayController {
 	   }
 	   for(int i=0;i<lotto.length;i++) {
 		   System.out.print(lotto[i]+" ");
+	   }
+	   
+   }
+   
+   public void arrayCopy() {
+	   //배열을 복사하는 방법 2가지
+	   //1. 얕은복사: 배열의 주소값만 복사를 하는것 ->저장소를 공유
+	   //2.깊은 복사: 
+	   //매소드의 매개변수에 값을 넣을 때 주소를 너으면 얕은 복사랑 동일함.
+	   
+	   int[]arr= {1,2,3,4,5};
+	   int[] arr2=arr;
+	   System.out.println(arr);
+	   System.out.println(arr2);
+	   System.out.println(arr2[0]);
+	   System.out.println(arr[0]);
+	   //복사된 배열의 값을 수정하면??
+	   arr[0]=100;
+	   System.out.println("arr[0]"+arr[0]);
+	   System.out.println(arr2[0]);
+	   //얕은 복사는 저장소를 같이 쓰는것 그래서 똑같이 나온다
+	   //2.깊은복사:
+	   int[] arr3=new int[arr.length];
+	   for(int i=0;i<arr3.length;i++) {
+		   arr3[i]=arr[i];
+	   }
+	   System.out.println(arr[0]);
+	   System.out.println(arr3[0]);
+	   arr3[0]=7;
+	   System.out.println(arr[0]);
+	   System.out.println(arr3[0]);
+	   //배열복사 기능을 하는 메소드
+	   //1: 복사할 대상(배열)
+	   //2: 복사할 대상의 시작 인덱스
+	   //3: 복사된 위치(target 배열)
+	   //4: 복사될 배열의 시작인덱스
+	   //5: 복사될 값의 갯수
+	   int[]arr4=new int[arr.length];
+	   System.arraycopy(arr,2,arr4,3,2);
+	   for(int i=0;i<arr4.length;i++) {
+		   System.out.println(arr4[i]);
 	   }
 	   
    }
