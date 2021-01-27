@@ -88,55 +88,152 @@ public class DimensionPractice {
 	public void practice5() {
 		Scanner sc = new Scanner(System.in);
 		boolean flag = true;
-		
+
 		while (flag) {
 			System.out.print("행 크기(1~10): ");
 			int a = sc.nextInt();
 			System.out.print("열 크기(1~10): ");
-			 int b = sc.nextInt();
-			 char[][] c = new char[a][b];
+			int b = sc.nextInt();
+			char[][] c = new char[a][b];
 			if (10 >= a && a > 0 && 10 >= b && b > 0) {
-				for (int i = 0; i < a ; i++) {
-					for (int j = 0; j < b ; j++) {
+				for (int i = 0; i < a; i++) {
+					for (int j = 0; j < b; j++) {
 						c[i][j] = (char) (new Random().nextInt(25) + 65);
 
 					}
-				
+
 				}
-				for(int i=0;i<c.length;i++) {
-					for(int j=0;j<c[b].length;j++) {
+				for (int i = 0; i < c.length; i++) {
+					for (int j = 0; j < c[b].length; j++) {
 						System.out.print(c[i][j]);
 					}
 					System.out.println();
 				}
-				flag=false;
+				flag = false;
 
-			}else {
+			} else {
 				System.out.println("반드시 1~10 사이의 정수를 입력해야합니다.");
-				
+
 			}
 		}
-		
-			
-
-		}
-
-	
-
-	public void practice6() {
 
 	}
 
+	public void practice6() {
+		String[][] strArr = new String[][] { { "이", "까", "왔", "앞", "힘" }, { "차", "지", "습", "으", "냅" },
+				{ "원", "열", "니", "로", "시" }, { "배", "심", "다", "좀", "다" }, { "열", "히", "! ", "더", "!! " } };
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				System.out.print(strArr[j][i] + " ");
+
+			}
+			System.out.println();
+		}
+	}
+
 	public void practice7() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("행의 크기: ");
+		int a = sc.nextInt();
+		int k = 97;
+		char[][] array = new char[a][];
+		for (int i = 0; i < a; i++) {
+			System.out.print(i + "행의 열 크기: ");
+			int b = sc.nextInt();
+			array[i] = new char[b];
+			for (int j = 0; j < b; j++) {
+				array[i][j] = (char) k;
+				k++;
+			}
+		}
+
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + " ");
+			}
+			System.out.println();
+		}
 
 	}
 
 	public void practice8() {
+		String[] ban1 = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
+		String[][] ban2 = new String[3][2];
+		String[][] ban3 = new String[3][2];
+		int k = 0;
+		int h = 6;
 
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 2; j++) {
+				ban2[i][j] = ban1[k];
+				k++;
+				ban3[i][j] = ban1[h];
+				h++;
+
+			}
+
+		}
+		for (int z = 1; z < 3; z++) {
+			System.out.println("==" + z + "분단==");
+			for (int i = 0; i < 3; i++) {
+				if (z == 1) {
+					for (int j = 0; j < 2; j++) {
+						System.out.print(ban2[i][j] + " ");
+
+					}
+					System.out.println();
+				} else {
+					for (int j = 0; j < 2; j++) {
+						System.out.print(ban3[i][j] + " ");
+
+					}
+					System.out.println();
+				}
+			}
+		}
 	}
 
 	public void practice9() {
+		Scanner sc = new Scanner(System.in);
+		String[] ban1 = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
+		String[][] ban2 = new String[3][2];
+		String[][] ban3 = new String[3][2];
+		int k = 0;
+		int h = 6;
+
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 2; j++) {
+				ban2[i][j] = ban1[k];
+				k++;
+				ban3[i][j] = ban1[h];
+				h++;
+
+			}
+
+		}
+		System.out.print("검색할 학생 이름을 입력하시오: ");
+		String student = sc.next();
+		boolean flag = true;
+		while (flag) {
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < 2; j++) {
+					if (student.equals(ban2[i][j]) && j == 0) {
+						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
+						flag = false;
+					} else if (student.equals(ban2[i][j]) && j == 1) {
+						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
+						flag = false;
+					} else if (student.equals(ban3[i][j]) && j == 0) {
+
+						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
+						flag = false;
+					} else if (student.equals(ban3[i][j]) && j != 0) {
+						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
+						flag = false;
+					}
+				}
+			}
+		}
 
 	}
-
 }
