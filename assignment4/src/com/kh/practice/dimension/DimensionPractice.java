@@ -61,23 +61,23 @@ public class DimensionPractice {
 
 	public void practice4() {
 		int[][] a = new int[4][4];
-		for (int i = 0; i < a.length - 1; i++) {
-			for (int j = 0; j < a.length - 1; j++) {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
 
 				a[i][j] = (new Random().nextInt(10) + 1);
 			}
 		}
-		for (int i = 0; i < a.length - 1; i++) {
-			for (int j = 0; j < a.length - 1; j++) {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
 				a[i][a.length - 1] += a[i][j];
 				a[a.length - 1][i] += a[j][i];
 
 			}
-			a[a.length - 1][a.length - 1] += a[i][a.length - 1] + a[a.length - 1][i];
+			a[3][3] += a[i][3] + a[3][i];
 		}
 
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < a.length; j++) {
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
 				System.out.printf("%-5d", a[i][j]);
 			}
 			System.out.println();
@@ -99,14 +99,10 @@ public class DimensionPractice {
 				for (int i = 0; i < a; i++) {
 					for (int j = 0; j < b; j++) {
 						c[i][j] = (char) (new Random().nextInt(25) + 65);
-
-					}
-
-				}
-				for (int i = 0; i < c.length; i++) {
-					for (int j = 0; j < c[b].length; j++) {
 						System.out.print(c[i][j]);
+
 					}
+
 					System.out.println();
 				}
 				flag = false;
@@ -194,46 +190,86 @@ public class DimensionPractice {
 	}
 
 	public void practice9() {
-		Scanner sc = new Scanner(System.in);
-		String[] ban1 = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
-		String[][] ban2 = new String[3][2];
-		String[][] ban3 = new String[3][2];
-		int k = 0;
-		int h = 6;
+	      Scanner sc = new Scanner(System.in);
+	      String[] ban1 = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };      
+	      String[][] ban2 = new String[3][2];
+	      String[][] ban3 = new String[3][2];
+	      //배열 넣기
+	      Object [] arr = new Object[2];
 
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 2; j++) {
-				ban2[i][j] = ban1[k];
-				k++;
-				ban3[i][j] = ban1[h];
-				h++;
+	      int idx=0;
+	      //배열에 담기
+	      for (int i = 0; i < 3; i++) {
+	         for (int j = 0; j < 2; j++) {
+	            ban2[i][j] = ban1[idx];
+	            ban3[i][j] = ban1[idx+6];
+	            idx++;
+	         }
 
-			}
+	      }
+	      arr[0] = ban2;
+	      arr[1] = ban3;
+	      
+	      //출력
+	      System.out.print("검색할 학생 이름을 입력하시오: ");
+	      String student = sc.next();
 
-		}
-		System.out.print("검색할 학생 이름을 입력하시오: ");
-		String student = sc.next();
-		boolean flag = true;
-		while (flag) {
-			for (int i = 0; i < 3; i++) {
-				for (int j = 0; j < 2; j++) {
-					if (student.equals(ban2[i][j]) && j == 0) {
-						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
-						flag = false;
-					} else if (student.equals(ban2[i][j]) && j == 1) {
-						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
-						flag = false;
-					} else if (student.equals(ban3[i][j]) && j == 0) {
+	      out:for(int i=0;i<3;i++) {
+	         String[][] ban= (String[][]) arr[i];
+	         for (int j=0;j<3;j++) {      
+	            for(int e=0;e<2;e++) {
+	               if(ban[j][e].equals(student)) {
+	                  String loc = e==0? "왼쪽":"오른쪽";
+	                  System.out.println("이 학 생은 " + (i+1)+" 분단 " + (j + 1) + "번 째 줄 "+loc+"에 있습니다.");
+	                  break out;
+	               }
+	               
+	            }
+	         }
+	      }
+	      
 
-						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
-						flag = false;
-					} else if (student.equals(ban3[i][j]) && j != 0) {
-						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
-						flag = false;
-					}
-				}
-			}
-		}
+//		Scanner sc = new Scanner(System.in);
+//		String[] ban1 = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
+//		String[][] ban2 = new String[3][2];
+//		String[][] ban3 = new String[3][2];
+//		int k = 0;
+//		int h = 6;
+//
+//		for (int i = 0; i < 3; i++) {
+//			for (int j = 0; j < 2; j++) {
+//				ban2[i][j] = ban1[k];
+//				k++;
+//				ban3[i][j] = ban1[h];
+//				h++;
+//
+//			}
+//
+//		}
+//		System.out.print("검색할 학생 이름을 입력하시오: ");
+//		String student = sc.next();
+//		boolean flag = true;
+//		while (flag) {
+//			for (int i = 0; i < 3; i++) {
+//				for (int j = 0; j < 2; j++) {
+//					if (student.equals(ban2[i][j]) && j == 0) {
+//						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
+//						flag = false;
+//					} else if (student.equals(ban2[i][j]) && j == 1) {
+//						System.out.println("이 학 생은" + " 1 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
+//						flag = false;
+//					} else if (student.equals(ban3[i][j]) && j == 0) {
+//
+//						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 왼쪽 에 있습니다.");
+//						flag = false;
+//					} else if (student.equals(ban3[i][j]) && j != 0) {
+//						System.out.println("이 학 생은" + " 2 분단 " + (i + 1) + "번 째 줄 오른쪽 에 있습니다.");
+//						flag = false;
+//					}
+//				}
+//			}
+//		}
 
 	}
+	
 }

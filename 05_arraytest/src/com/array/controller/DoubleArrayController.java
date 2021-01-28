@@ -71,6 +71,7 @@ public class DoubleArrayController {
 			}
 			System.out.println();
 		}
+	
 		
 		
 	}
