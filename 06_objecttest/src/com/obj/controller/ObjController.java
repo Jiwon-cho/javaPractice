@@ -2,6 +2,7 @@ package com.obj.controller;
 
 import com.obj.model.vo.MemberVariable;
 import com.obj.model.vo.PublicTest;
+import com.obj.model.vo.Test;
 //import com.obj.model.vo.DefaultTest; 안됌 디폴트라 안보임
 public class ObjController {
 	
@@ -41,6 +42,12 @@ public class ObjController {
 		System.out.println("mv: "+mv.memberId);
 		System.out.println("mv1: "+mv1.memberId);
 		System.out.println("mv2: "+mv2.memberId);
+		
+		Test t=new Test();
+		System.out.println(t.test);
+	
+		
+		
 		
 	}
 }
