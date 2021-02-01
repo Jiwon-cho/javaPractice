@@ -112,17 +112,17 @@ public class ArrayController {
 	}
 	public void changeData() {
 		//배열에 저장 되어 있는 값을 변경
-//		int[] num= {1,5,3,6,8,9};
-//		for(int i=0;i<num.length;i++) {
-//			System.out.print(num[i]+" ");
-//		}
-//		System.out.println();
-//		int temp=num[4];
-//		num[4]=num[1];
-//		num[1]=temp;
-//		for(int i=0;i<num.length;i++) {
-//			System.out.print(num[i]+" ");
-//		}
+		int[] num= {1,5,3,6,8,9};
+		for(int i=0;i<num.length;i++) {
+			System.out.print(num[i]+" ");
+		}
+		System.out.println();
+		int temp=num[4];
+		num[4]=num[1];
+		num[1]=temp;
+		for(int i=0;i<num.length;i++) {
+			System.out.print(num[i]+" ");
+		}
 		
 		int[] nums= {78,3,5,2,6,9,12,4,7};
 		for(int i=0;i<nums.length;i++) {
@@ -206,4 +206,7 @@ public class ArrayController {
 	   }
 	   
    }
+   
+	   
+   
 }
