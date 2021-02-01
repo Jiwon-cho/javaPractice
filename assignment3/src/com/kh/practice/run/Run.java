@@ -15,9 +15,9 @@ public class Run {
 //		new ArrayPractice().practice7();
 //		new ArrayPractice().practice8();
 //		new ArrayPractice().practice9();
-		new ArrayPractice().practice10();
+//		new ArrayPractice().practice10();
 //		new ArrayPractice().practice11();
-//		new ArrayPractice().practice12();
+		new ArrayPractice().practice12();
 //		new ArrayPractice().practice13();
 //		new ArrayPractice().practice14();
 //		new ArrayPractice().practice15();

@@ -160,12 +160,41 @@ public class ArrayPractice {
 		
 	}
 	public void practice11() {
+		int array[]=new int[10];
+		for(int i=0;i<10;i++) {
+			array[i]=(new Random().nextInt(10)+1);
+			System.out.print(array[i]+" ");
+		}
 		
 	}
 	public void practice12() {
+		int array[]=new int[10];
+		for(int i=0;i<10;i++) {
+			array[i]=(new Random().nextInt(10)+1);
+			System.out.print(array[i]+" ");
+		}
+		
+		for(int i=0;i<10;i++) {
+			for(int j=0;j<10;j++) {
+				if(array[i]<array[j] ) {
+					int t=array[i];
+					array[i]=array[j];
+					array[j]=t;
+				}
+			}
+			
+		}
+		
+		
+		
+		System.out.print("\n최대값: "+array[9]);
+		System.out.println("\n최소값: "+array[0]);
+		
 		
 	}
 	public void practice13() {
+		int array[]=new int[10];
+		
 		
 	}
 	public void practice14() {

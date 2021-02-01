@@ -1,5 +1,10 @@
 package com.obj.controller;
 
+import java.util.Scanner;
+
+import com.obj.model.vo.CalcResult;
+
+//기능제공형 클래스
 public class MethodTest {
 	//(멤버)메소드 만들기
 	
@@ -35,6 +40,29 @@ public class MethodTest {
 		}
 		return result;
 		
+	}
+	//반환형 있고 매개 변수 없는 메소드 구현하기
+	public CalcResult cal4() {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.print("수입력: ");
+		int su=sc.nextInt();
+		System.out.print("수입력: ");
+		int su2=sc.nextInt();
+		System.out.print("연산자: ");
+		char op=sc.next().charAt(0);
+		double result=0.0;
+		switch(op) {
+		case'+': result=su+su2;break;
+		case'-':result=su-su2;break;
+		case'*':result=su*su2;break;
+		case'/':result=(double)su/su2;break;
+		
+		}
+		CalcResult cr=new CalcResult(su,su2,op,result);
+		return cr;
+		//return 값은 한개만 리턴가능/ 얜 매개변수 없이 그냥 지정 이라 결과값만 나옴 뭐가 어떻게 진행되는지 메인에서는
+		//알수가 없음//그래서 이렇게 메소드 써서 변수를 받아옴
 	}
 
 }
