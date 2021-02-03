@@ -2,7 +2,7 @@ package com.student.model.vo;
 
 //학생정보를 저자하는객체
 public class Student {
-	
+// public static int count=0;	
 	private String name;//학생 이름, 2글자 이상
 	private int age;//학생 나이, 음수는 대입금지
 	private char gender;//
@@ -11,6 +11,10 @@ public class Student {
 	private int eng;
 	private int math;
 	private int coding;
+	
+	//{
+	//	this.studentNumber=++count;
+	//}
 	
 	public Student() {}
 	
@@ -76,7 +80,7 @@ public class Student {
 	//항목간격은 \t 출력하고 값은 String으로 반환하는 매소드임.
 	//studentInfo()
 	public String studentInfo() {
-		return name+"\t"+age+"\t"+gender+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math+"\t"+math+"\t"+coding;
+		return name+"\t"+age+"\t"+gender+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math+"\t"+coding;
 	}
 	
 	

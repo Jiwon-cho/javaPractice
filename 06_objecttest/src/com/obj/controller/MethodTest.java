@@ -64,5 +64,42 @@ public class MethodTest {
 		//return 값은 한개만 리턴가능/ 얜 매개변수 없이 그냥 지정 이라 결과값만 나옴 뭐가 어떻게 진행되는지 메인에서는
 		//알수가 없음//그래서 이렇게 메소드 써서 변수를 받아옴
 	}
+	//static 메소드
+	//객체를 생성하지 않고 호출이 가능한 메소드 클래스명.메소드명(); 호출
+	public static void staticTest() {
+		System.out.println("스테틱 메소드");
+		Math.random();//스테틱 메소드
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

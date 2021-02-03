@@ -13,6 +13,26 @@ public class StudentController {
 		//메인 화면을 호출해주는 기능
 		view.mainMenu(this);
 	}
+	public void studentCal() {
+		searchAll();
+		Student s=view.calCul();
+		String students=dao.studentCal(s);
+		view.printMsg(students.equals("")?"성적이 입력 되있지 않습니다":students);
+	}
+	
+	
+	
+	public void studentRecord() {
+		searchAll();
+		Student s=view.inputRecord();
+		boolean flag=dao.studentRecord(s);
+		view.printMsg(flag?"입력성공":"조회되지 않습니다");
+		
+	}
+	
+	
+	
+	
 	
 	public void insertStudent() {
 		//사용자가 입력하는 데이터를 dao의 맴버변수에 저장을 하는 기능

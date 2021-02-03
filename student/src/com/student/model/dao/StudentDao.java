@@ -12,7 +12,81 @@ public class StudentDao {
 
 	// 매개변수로 전달된 저장소(멤버변수)에 저장하는 기능
 	// 인자값->받아오는 데이터
+	public String studentCal(Student s) {
+		String result="";
+		if (s1!=null&&s1.getName().equals(s.getName())) {
+			int sum=s1.getKor()+s1.getEng()+s1.getCoding()+s1.getMath();
+			double avr=sum/4;
+			result+="이름: "+s1.getName()+"\n합계: "+sum+"\n평균: "+avr;
+						
+		}
+		else if (s2!=null&&s2.getName().equals(s.getName())) {
+			int sum=s2.getKor()+s2.getEng()+s2.getCoding()+s2.getMath();
+			double avr=sum/4;
+			result+="이름: "+s2.getName()+"\n합계: "+sum+"\n평균: "+avr;			
+		}
+		else if (s3!=null&&s3.getName().equals(s.getName())) {
+			int sum=s3.getKor()+s3.getEng()+s3.getCoding()+s3.getMath();
+			double avr=sum/4;
+			result+="이름: "+s3.getName()+"\n합계: "+sum+"\n평균: "+avr;		
+		}
+		else if (s4!=null&&s4.getName().equals(s.getName())) {
+			int sum=s4.getKor()+s4.getEng()+s4.getCoding()+s4.getMath();
+			double avr=sum/4;
+			result+="이름: "+s4.getName()+"\n합계: "+sum+"\n평균: "+avr;
+		}
+		else if (s5!=null&&s5.getName().equals(s.getName())){
+			int sum=s5.getKor()+s5.getEng()+s5.getCoding()+s5.getMath();
+			double avr=sum/4;
+			result+="이름: "+s5.getName()+"\n합계: "+sum+"\n평균: "+avr;		
+		}
+		
+		return result;
+	}
+	
+	
+	
+	
+	
+	public boolean studentRecord(Student s) {
+		boolean flag=true;
+		if (s1!=null&&s1.getName().equals(s.getName())) {
+			s1.setKor(s.getKor());
+			s1.setEng(s.getEng());
+			s1.setMath(s.getMath());
+			s1.setCoding(s.getCoding());
+		}
+		else if (s2!=null&&s2.getName().equals(s.getName())) {
+			s2.setKor(s.getKor());
+			s2.setEng(s.getEng());
+			s2.setMath(s.getMath());
+			s2.setCoding(s.getCoding());			
+		}
+		else if (s3!=null&&s3.getName().equals(s.getName())) {
+			s3.setKor(s.getKor());
+			s3.setEng(s.getEng());
+			s3.setMath(s.getMath());
+			s3.setCoding(s.getCoding());			
+		}
+		else if (s4!=null&&s4.getName().equals(s.getName())) {
+			s4.setKor(s.getKor());
+			s4.setEng(s.getEng());
+			s4.setMath(s.getMath());
+			s4.setCoding(s.getCoding());
+		}
+		else if (s5!=null&&s5.getName().equals(s.getName())){
+			s5.setKor(s.getKor());
+			s5.setEng(s.getEng());
+			s5.setMath(s.getMath());
+			s5.setCoding(s.getCoding());			
+		}else {
+			flag=false;
+		}
+		return flag;
 
+	}
+	
+	
 	public boolean insertStudent(Student s) {
 		// 1.비어있는 변수를 찾아서 저장
 		boolean flag = true;
@@ -87,23 +161,23 @@ public class StudentDao {
 		boolean flag=true;
 		if (s1!=null&&s1.getName().equals(s.getName())) {
 			s1.setAge(s.getAge());
-			s1.setAddress(s.getAddress());				;
+			s1.setAddress(s.getAddress());				
 		}
 		else if (s2!=null&&s2.getName().equals(s.getName())) {
 			s2.setAge(s.getAge());
-			s2.setAddress(s.getAddress());				;
+			s2.setAddress(s.getAddress());				
 		}
 		else if (s3!=null&&s3.getName().equals(s.getName())) {
 			s3.setAge(s.getAge());
-			s3.setAddress(s.getAddress());				;
+			s3.setAddress(s.getAddress());				
 		}
 		else if (s4!=null&&s4.getName().equals(s.getName())) {
 			s4.setAge(s.getAge());
-			s4.setAddress(s.getAddress());				;
+			s4.setAddress(s.getAddress());
 		}
 		else if (s5!=null&&s5.getName().equals(s.getName())){
 			s5.setAge(s.getAge());
-			s5.setAddress(s.getAddress());				;
+			s5.setAddress(s.getAddress());				
 		}else {
 			flag=false;
 		}

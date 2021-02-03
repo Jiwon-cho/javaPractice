@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.obj.controller.MethodTest;
 import com.obj.model.vo.CalcResult;
+import com.obj.model.vo.Person;
 
 public class MethodMain {
 
@@ -34,6 +35,13 @@ public class MethodMain {
 //		System.out.print(mt.cal4());
 		CalcResult cr=mt.cal4();
 		System.out.println(""+cr.su+cr.op+cr.su2+"="+result);
+		
+		
+		
+		//static 메소드 호출하기
+		MethodTest.staticTest();
+		Person p=new Person();
+		p.setCount(10);//static이라서 바로 접근
 
 	}
 

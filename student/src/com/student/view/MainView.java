@@ -17,6 +17,8 @@ public class MainView {
 		System.out.println("2.학생 등록");
 		System.out.println("3.학생성별검색");
 		System.out.println("4.학생정보수정(나이,주소)");//기준 이름
+		System.out.println("5.성적입력");
+		System.out.println("7.학생성적출력(합계,평균)");
 		System.out.println("0. 프로그램 종료");
 		System.out.print("선택: ");
 		int cho=sc.nextInt();
@@ -25,11 +27,42 @@ public class MainView {
 		case 2: stc.insertStudent();break;
 		case 3: stc.searchGender();break;
 		case 4: stc.changeInfo();break;
+		case 5: stc.studentRecord();break;
+		case 7: stc.studentCal();break;
 		case 0:System.out.println("프로그램을 종료합니다");return;
 		//return 은 메소드 자체를 끝내버리는 것 
 		}
 	}
 }
+	
+	public Student calCul() {
+		Scanner sc=new Scanner(System.in);
+		Student s=new Student();	
+		System.out.println("학생의 이름을 입력하시오: ");
+		s.setName(sc.next());
+		return s;
+		
+	}
+	
+	
+	public Student inputRecord() {
+		Scanner sc=new Scanner(System.in);
+		Student s=new Student();
+		System.out.println("성적을 입력할 학생의 이름을 입력하시오: ");
+		s.setName(sc.next());
+		System.out.println("국어 성적을 입력하세요: ");
+		s.setKor(sc.nextInt());
+		System.out.println("영어 성적을 입력하세요: ");
+		s.setEng(sc.nextInt());
+		System.out.println("수학 성적을 입력하세요: ");
+		s.setMath(sc.nextInt());
+		System.out.println("코딩 성적을 입력하세요: ");
+		s.setCoding(sc.nextInt());
+		return s;
+	}
+	
+	
+	
 
 	//사용자 데이터 입력 화면 구현
 	public Student inputData() {
@@ -79,5 +112,6 @@ public class MainView {
 		s.setAddress(sc.nextLine());
 		return s;
 	}
+	
 	
 }

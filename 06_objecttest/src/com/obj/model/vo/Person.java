@@ -8,6 +8,17 @@ public class Person {
 	private double height;
 	private String email;
 	private String address;
+	private static int count;
+	
+	public static void setCount(int count) {
+		//this.name/name 둘다 안됌 영역이 다름
+		Person.count=count;
+	}
+	
+	public int getCount() {
+		Person.setCount(20);
+		return count;
+	}
 	
 	public Person() {}
 	
