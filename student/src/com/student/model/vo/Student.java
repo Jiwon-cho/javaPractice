@@ -79,10 +79,14 @@ public class Student {
 	//학생정보를 모두 출력하는 메소드 구현하기
 	//항목간격은 \t 출력하고 값은 String으로 반환하는 매소드임.
 	//studentInfo()
-	public String studentInfo() {
-		return name+"\t"+age+"\t"+gender+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math+"\t"+coding;
-	}
+//	public String studentInfo() {
+//		return name+"\t"+age+"\t"+gender+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math+"\t"+coding;
+//	}
 	
+@Override
+public String toString() {
+	return name+"\t"+age+"\t"+gender+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math+"\t"+coding;
+}
 	
 	
 }	
