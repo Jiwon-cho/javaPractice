@@ -1,5 +1,7 @@
 package com.inherit.model.vo;
 
+import java.util.Objects;
+
 public class Student extends Person {
 	
 //	private String name;
@@ -116,13 +118,41 @@ public String toString() {
 			+getPhone()+" "+getWeight()+" "+getHeight()+" "+grade+" "+group+" "+number;
 }
 	
+@Override
+public boolean equals(Object obj) {
+	//1 . 무엇(어떤 데이터를 기준으로)을 같은 객체로 보게 할것 인지
+	//Object  는 모든것의 부모이기 때문에 모든 타입 다 가능한다는 말
+	Student s=(Student)obj;
+	if(getName().equals(s.getName())&&
+			getAge()==s.getAge()&&
+			getAddress().equals(s.getAddress())) {
+		return true;
+		
+	}else
 	
-	
-	
-	
-	
-	
-	
-	
+	return false;
 }
+//동등성비교를 했을때 데이터 일치여부만 오버라이딩 하는게 아니고
+//hashCode() 주소값을 출력하는 매소드도 처리해야함.
+@Override
+public int hashCode() {
+	return Objects.hash(getName(),getAge(),getAddress());
+}
+
+//객체 깊은복사 처리하기
+//clone() 매소드 오버라이딩
+@Override
+public Student clone() {
+	return new Student(getName(),getAge(),getGender(),getAddress(),getPhone(),getWeight(),getHeight(),grade,group,number);
+}
+
+
+}
+	
+	
+	
+	
+	
+	
+
 

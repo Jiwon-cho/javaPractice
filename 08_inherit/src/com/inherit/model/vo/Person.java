@@ -1,6 +1,6 @@
 package com.inherit.model.vo;
 
-public class Person {
+public  class Person {
 	private String name;
 //	protected int age; protected 는 후손 클래스는 사용 가능해서 이렇게하면 접근 가능
 	private int age;
@@ -78,7 +78,7 @@ public class Person {
 		return height;
 	}
 	
-	public void infoObject() {
+	public final void infoObject() {//오버라이딩을 불가능하게 만드는 예약어
 		System.out.println("자고싶다");
 	}
 	

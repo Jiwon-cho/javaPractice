@@ -82,10 +82,10 @@ public class Employee extends Person{
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	@Override
-	public void infoObject() {
-		System.out.println("감자");
-	}
+//	@Override
+//	public void infoObject() {
+//		System.out.println("감자");
+//	}
 	
 	
 	@Override
@@ -95,19 +95,32 @@ public class Employee extends Person{
 	}
 		
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+@Override
+public boolean equals(Object obj) {
+	if(obj instanceof Employee) {
+	Employee e=(Employee)obj;
+	if(getName().equals(e.getName())&&department.equals(e.department)
+			&&getJob().equals(e.getJob())
+			&&getSalary()==e.getSalary()) {
+		return true;
+	}
+	}
+	return false;
 }
+}
+// 이런식으로 어차피 지들 꺼라 그냥 갔다 써도됨//name은 상속받는거라 안됌 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

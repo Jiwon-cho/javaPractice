@@ -1,6 +1,7 @@
 package com.kh.practice.array;
 
 import java.util.*;
+import java.util.Scanner;
 
 public class ArrayPractice {
 	public void practice1() {
@@ -253,58 +254,89 @@ public class ArrayPractice {
 
 	public void practice16() {
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.print("배열의 크기를 입력하세요: ");
-		int sum = sc.nextInt();
+		int cnt=sc.nextInt();
+		
+		String []arr=new String[cnt];
+		for(int i=0;i<cnt;i++) {
+			System.out.println((i+1)+"번째 문자열: ");
+			arr[i]=sc.next();
+		}
+		while(true) {
+			System.out.print("더 값을 입력하시겠습니까?");
+			String sw=sc.next().toLowerCase().trim();
+			if(sw.equals("y")) {
+				System.out.println("더 입력하고 싶은 개수: ");
+				int mrcnt=sc.nextInt();
+				cnt+=mrcnt;
+				String []temp=Arrays.copyOf(arr,cnt);
+				
+				arr=temp;
+				for(int i=cnt-mrcnt;i<cnt;i++) {
+					System.out.println((i+1)+"번째 문자열: ");
+					arr[i]=sc.next();
+				}
+			}else {
+				System.out.print(Arrays.toString(arr));
+				return;
+			}
+			
+		}
+	
+		
+//		System.out.print("배열의 크기를 입력하세요: ");
+//		int sum = sc.nextInt();
 //		String a[];
 //		char as='y';
 //		while(as!='n') {
 //			
 //		}
 
-		String[] ar = new String[sum];
-		String []ar2=ar;
-		for (int i = 0; i <sum; i++) { 
-			System.out.print(i+1 + "번째 문자열: ");
-			String idx = sc.next();
-			ar[i] = idx;
-		}
-		System.out.print("더 값을 입력하시겠습니까(Y/N): ");
-		char as = sc.next().charAt(0);
-		
-		
-		if (as == 'n') {
-			for (int i = 0; i < sum; i++) {
-				System.out.print(ar[i]);
-
-			}
-
-		} else if (as == 'y') {
-			while(as!='n') {
-				System.out.print("더 입력하고 싶은 개수: ");
-				int mnum=sc.nextInt();
-				int t=sum;
-				sum+=mnum;
-				ar2=new String[sum];
-				
-				for(int i=t;i<sum;i++) {
-					System.out.print(t+1+"번째 문자열");
-					String midx=sc.next();
-					ar2[i]=midx;
-					
-				}
-			
-				System.out.print("더 값을 입력하시겠습니까?(Y/N): ");
-				as=sc.next().charAt(0);
-			}
-			for(int i=0;i<3;i++) {
-				System.out.print(ar[i]);
-			}
-			for(int i=0;i<sum;i++) {
-				System.out.print(ar2[i]);
-			}
-			
-			
-		}
+//		String[] ar = new String[sum];
+//		String []ar2=ar;
+//		for (int i = 0; i <sum; i++) { 
+//			System.out.print(i+1 + "번째 문자열: ");
+//			String idx = sc.next();
+//			ar[i] = idx;
+//		}
+//		System.out.print("더 값을 입력하시겠습니까(Y/N): ");
+//		char as = sc.next().charAt(0);
+//		
+//		
+//		if (as == 'n') {
+//			for (int i = 0; i < sum; i++) {
+//				System.out.print(ar[i]);
+//
+//			}
+//
+//		} else if (as == 'y') {
+//			while(as!='n') {
+//				System.out.print("더 입력하고 싶은 개수: ");
+//				int mnum=sc.nextInt();
+//				int t=sum;
+//				sum+=mnum;
+//				ar2=new String[sum];
+//				
+//				for(int i=t;i<sum;i++) {
+//					System.out.print(t+1+"번째 문자열");
+//					String midx=sc.next();
+//					ar2[i]=midx;
+//					
+//				}
+//			
+//				System.out.print("더 값을 입력하시겠습니까?(Y/N): ");
+//				as=sc.next().charAt(0);
+//			}
+//			for(int i=0;i<3;i++) {
+//				System.out.print(ar[i]);
+//			}
+//			for(int i=0;i<sum;i++) {
+//				System.out.print(ar2[i]);
+//			}
+//			
+//			
+//		}
 
 	}
 }
