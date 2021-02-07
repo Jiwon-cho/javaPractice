@@ -70,6 +70,7 @@ public class Main {
 		System.out.println("s6:"+s6.hashCode());
 		
 		Student copy=s5.clone();
+		System.out.println(s5);
 		System.out.println(copy);
 	}
 

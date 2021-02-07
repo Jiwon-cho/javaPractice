@@ -40,7 +40,7 @@ public class ObjController {
 		System.out.println(MemberVariable.bonus);
 		MemberVariable mv2=new MemberVariable();
 		System.out.println("mv: "+mv.memberId);
-		System.out.println("mv1: "+mv1.memberId);
+		//System.out.println("mv1: "+mv1.memberId);
 		System.out.println("mv2: "+mv2.memberId);
 		
 		Test t=new Test();
