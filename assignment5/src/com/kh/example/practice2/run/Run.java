@@ -8,6 +8,7 @@ public class Run {
 		
 		// TODO Auto-generated method stub
 		Product p=new Product();
+		p.information();
 	}
 
 }

@@ -17,6 +17,7 @@ public class MemberController {
 	public void changeArr(int[] arr) {
 		arr[0]=100;
 		arr[1]=200;
+	
 	}
 	//배열도 주소, heap 영역에 할당
 	

@@ -214,14 +214,14 @@ public class DimensionPractice {
 	      System.out.print("검색할 학생 이름을 입력하시오: ");
 	      String student = sc.next();
 
-	      out:for(int i=0;i<3;i++) {
+	      here:for(int i=0;i<2;i++) {
 	         String[][] ban= (String[][]) arr[i];
 	         for (int j=0;j<3;j++) {      
 	            for(int e=0;e<2;e++) {
 	               if(ban[j][e].equals(student)) {
 	                  String loc = e==0? "왼쪽":"오른쪽";
 	                  System.out.println("이 학 생은 " + (i+1)+" 분단 " + (j + 1) + "번 째 줄 "+loc+"에 있습니다.");
-	                  break out;
+	                  break here;
 	               }
 	               
 	            }

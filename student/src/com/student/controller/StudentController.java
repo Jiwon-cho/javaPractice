@@ -1,5 +1,6 @@
 package com.student.controller;
 
+import com.student.common.StudentDaoInter;
 import com.student.model.dao.StudentDao;
 import com.student.model.vo.Student;
 import com.student.view.MainView;
@@ -7,7 +8,8 @@ import com.student.view.MainView;
 public class StudentController {
 	//view 와 dao 메소드를 호출
 	
-	private StudentDao dao=new StudentDao();//선언을 해준 것
+	private StudentDaoInter dao=new StudentDao();
+	//=new StudentDao();//선언을 해준 것
 	private MainView view=new MainView();
 	public void mainMenu() {
 		//메인 화면을 호출해주는 기능

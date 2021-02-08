@@ -1,8 +1,9 @@
 package com.student.model.dao;
 
+import com.student.common.StudentDaoInter;
 import com.student.model.vo.Student;
 
-public class StudentDao {
+public class StudentDao implements StudentDaoInter{
 	// 프로그램에서 동작하는 데이터저장 역할
 	private Student[]st=new Student[5];
 	//private Students[] students=new Student[5] 이런식으로 하면 밑에 student 있어서
@@ -17,6 +18,7 @@ public class StudentDao {
 
 	// 매개변수로 전달된 저장소(멤버변수)에 저장하는 기능
 	// 인자값->받아오는 데이터
+	@Override
 	public String studentCal(Student s) {
 		String result="";
 //		if (s1!=null&&s1.getName().equals(s.getName())) {
@@ -58,7 +60,7 @@ public class StudentDao {
 	
 	
 	
-	
+	@Override
 	public boolean studentRecord(Student s) {
 	
 	
@@ -111,7 +113,7 @@ public class StudentDao {
 
 
 	
-	
+	@Override
 	public boolean insertStudent(Student s) {
 		// 1.비어있는 변수를 찾아서 저장
 		boolean flag = false;
@@ -144,6 +146,7 @@ public class StudentDao {
 		return flag;
 	}
 
+	@Override
 	public String searchAll() {
 		// 멤버변수에 있는 데이터를 반환.
 		String students = "";
@@ -167,7 +170,7 @@ public class StudentDao {
 		return students;
 
 	}
-	
+	@Override
 	public String searchGender(char gender) {
 		String students="";
 //		if (s1!=null&&s1.getGender()==gender) {
@@ -193,7 +196,7 @@ public class StudentDao {
 		}
 		return students;
 	}
-	
+	@Override
 	public boolean changeInfo(Student s) {
 		boolean flag=false;
 //		if (s1!=null&&s1.getName().equals(s.getName())) {

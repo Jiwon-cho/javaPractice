@@ -16,7 +16,7 @@ public class CircleController {
 		c.setY(y);
 		
 		c.setRadius(radius);
-		return "µ—∑π: "+c.toString()+(double)(c.getRadius()*3.14*2) ;
+		return "µ—∑π: "+c+(double)(c.getRadius()*3.14*2) ;
 	}
 	
 	public String calcCircleArea(int x,int y,int radius) {
@@ -25,7 +25,7 @@ public class CircleController {
 		c.setY(y);
 		
 		c.setRadius(radius);
-		return "≥–¿Ã: "+c.toString()+(double)(Math.pow(c.getRadius(),2)*3.14) ;
+		return "≥–¿Ã: "+c+(double)(Math.pow(c.getRadius(),2)*3.14) ;
 	}
 
 }

@@ -18,6 +18,6 @@ public class RectangleController {
 	r.setY(y);
 	r.setWidth(width);
 	r.setHeight(height);
-	return "면적: "+r.toString()+(r.getHeight()*r.getWidth());
+	return "면적: "+r+(r.getHeight()*r.getWidth());
 }
 }

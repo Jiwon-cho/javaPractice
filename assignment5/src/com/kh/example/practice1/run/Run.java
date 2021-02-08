@@ -6,9 +6,9 @@ public class Run {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Member m=new Member("gwon","rkrkrk","조지원","02010230",29,'m',"2ㅁㄴㄻㄹ@ㅁ니이ㅓ");
-		
-		m.changeName("갈갈");
+		Member m=new Member();
+	
+		m.changeName("지원");
 		m.printNmae();
 		
 		
