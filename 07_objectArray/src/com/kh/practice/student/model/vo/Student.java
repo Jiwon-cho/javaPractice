@@ -8,7 +8,7 @@ public class Student {
 	public Student() {}
 	
 	
-	protected Student(String name, String subject, int score) {
+	public Student(String name, String subject, int score) {
 		super();
 		this.name = name;
 		this.subject = subject;

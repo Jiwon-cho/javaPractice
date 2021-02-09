@@ -24,5 +24,9 @@ public interface AnimalBarkAble {//extends FlyAble,Runnable,MouseListener{
 //		void test1();// 이렇게도 가능
 //얘네 있으면 모든 메소드를 다 구현해야되기 때문에 없으면 오류남
 		void bark();
+	
+		default public void move() {
+			System.out.println("움직인다");
+		};
 
 }

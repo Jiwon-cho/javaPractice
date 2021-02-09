@@ -36,7 +36,7 @@ public class Main2 {
 		animal=new Chicken();
 		FlyAble f= new Chicken();
 		ac.fly(f);
-		
+		animal.move();
 		//공통 작업에서 능률을 향상
 	}
 
