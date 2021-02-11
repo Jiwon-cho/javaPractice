@@ -7,8 +7,10 @@ import com.baseball.model.vo.Baseball;
 public class Run {
 
 	public static void main(String[] args) {
-		Baseball b=new Baseball();
-		String ran=b.Numb();
+		
+		
+	    Baseball b=new Baseball();
+		 String ran=b.Numb();
 		Scanner sc=new Scanner(System.in);
 		int count=1;
 		
