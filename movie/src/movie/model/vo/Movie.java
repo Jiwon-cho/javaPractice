@@ -12,7 +12,7 @@ import org.jsoup.select.Elements;
 
 public class Movie {
 
-	public static void main(String[] args) {
+	public static String[][] main() {
 		String url = "https://movie.naver.com/movie/running/current.nhn#";
 		Document doc = null;
 		try {
@@ -97,29 +97,30 @@ public class Movie {
 			movie[i][1] = tit2.get(i);
 			movie[i][2] = rank.get(i);
 		}
+		return movie;
 
 //for(int i=0;i<111;i++) {
 //	if(movie[i][0].equals("청소년 관람불가")) {
 //	System.out.println("\""+movie[i][1]+"\""+"(을)를 시청하기 위해서는 성인 인증이 필요합니다.");	
 //	}
 //}
-		Scanner sc = new Scanner(System.in);
-		System.out.println("찾고자 하는 영화의 이름을 입력하시오: ");
-		String name = sc.next().trim().replace(" ", "");
-		boolean flag = false;
-		for (int i = 0; i < 111; i++) {
-
-			if (name.equals(movie[i][1].trim().replace(" ", "")) && movie[i][0].equals("청소년 관람불가")) {
-				System.out.println("\"" + movie[i][1] + "\"" + "(을)를 시청하기 위해서는 성인 인증이 필요합니다.");
-				flag = true;
-			} else if (name.equals(movie[i][1].trim().replace(" ", "")) && !movie[i][0].equals("청소년 관람불가")) {
-				System.out.println("\"" + movie[i][1] + "\"" + "(은)는 " + movie[i][0] + " 입니다.");
-				flag = true;
-			}
-		}
-		if (flag == false) {
-			System.out.println(name + " (은)는 존재하지 않는 영화입니다.");
-		}
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("찾고자 하는 영화의 이름을 입력하시오: ");
+//		String name = sc.next().trim().replace(" ", "");
+//		boolean flag = false;
+//		for (int i = 0; i < 111; i++) {
+//
+//			if (name.equals(movie[i][1].trim().replace(" ", "")) && movie[i][0].equals("청소년 관람불가")) {
+//				System.out.println("\"" + movie[i][1] + "\"" + "(을)를 시청하기 위해서는 성인 인증이 필요합니다.");
+//				flag = true;
+//			} else if (name.equals(movie[i][1].trim().replace(" ", "")) && !movie[i][0].equals("청소년 관람불가")) {
+//				System.out.println("\"" + movie[i][1] + "\"" + "(은)는 " + movie[i][0] + " 입니다.");
+//				flag = true;
+//			}
+//		}
+//		if (flag == false) {
+//			System.out.println(name + " (은)는 존재하지 않는 영화입니다.");
+//		}
 	}
 
 }
