@@ -9,7 +9,7 @@ public class DateController {
 		Date today=new Date();
 		System.out.println(today);
 		
-		Date day=new Date(123456789L);
+		Date day=new Date(1622569890039L);
 		System.out.println(day);
 		
 		Date birthDay=new Date(91,7-1,30);

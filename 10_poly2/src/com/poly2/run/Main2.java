@@ -3,6 +3,7 @@ package com.poly2.run;
 import com.poly2.common.AnimalBarkAble;
 import com.poly2.common.FlyAble;
 import com.poly2.controller.AnimalController;
+import com.poly2.model.vo.Cat;
 import com.poly2.model.vo.Chicken;
 import com.poly2.model.vo.Dog;
 import com.poly2.model.vo.Lion;
@@ -18,10 +19,10 @@ public class Main2 {
 		//animal=new Animal(); <- implements 안해서 안됌
 		//animal
 		
-//		animal=new Dog();
-//		animal.bark();		
-//		animal=new Cat();
-//		animal.bark();
+		animal=new Dog();
+		animal.bark();		
+		animal=new Cat();
+		animal.bark();
 //		
 //		
 		
@@ -33,11 +34,19 @@ public class Main2 {
 		
 		ac.fly(new Chicken());
 		
-		animal=new Chicken();
+		//animal=new Chicken();
 		FlyAble f= new Chicken();
 		ac.fly(f);
 		animal.move();
 		//공통 작업에서 능률을 향상
+		
+	
+		
+		
+		
+		
+		
+		
 	}
 
 }

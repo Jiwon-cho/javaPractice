@@ -1,5 +1,7 @@
 package com.inherit.model.vo;
 
+import java.util.Objects;
+
 public class Employee extends Person{
 	
 //	private String name;
@@ -107,6 +109,13 @@ public boolean equals(Object obj) {
 	}
 	return false;
 }
+
+@Override
+public int hashCode() {
+	return Objects.hash(getName(),department,getJob(),getSalary());
+}
+
+
 }
 // 이런식으로 어차피 지들 꺼라 그냥 갔다 써도됨//name은 상속받는거라 안됌 
 	

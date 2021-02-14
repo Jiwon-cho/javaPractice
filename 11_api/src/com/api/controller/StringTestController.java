@@ -108,7 +108,7 @@ public class StringTestController {
 		StringBuffer sb=new StringBuffer();
 		//데이터 넣기(추가)
 		//append() 메소드 이용
-		sb.append("여러분 힘내세용!!");
+		sb.append("여러분 힘내세용!!");	
 		System.out.println(sb);
 		System.out.println(sb.hashCode());
 		sb.append("이제곧 저녁시간");

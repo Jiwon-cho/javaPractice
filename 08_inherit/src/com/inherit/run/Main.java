@@ -63,11 +63,13 @@ public class Main {
 		//Student 객체의 동등성(값이 같은지 비교) 하려면-> Object 클래스의  equals() overriding 해서 비교해야함
 		System.out.println("equals: "+s5.equals(s6));
 		System.out.println("equals: "+s5.equals(s7));
-		Employee e1=new Employee("강바울",26,'남',"서울","123213231",70,199.5,"개발팀","팀장",100);
+		Employee e1=new Employee("얄라쑝",26,'남',"서울","123213231",70,199.5,"개발팀","팀장",100);
 		System.out.println(e.equals(e1));
 		System.out.println(e.equals("이거비교"));
 		System.out.println("s5: "+s5.hashCode());
 		System.out.println("s6:"+s6.hashCode());
+		System.out.println(e.hashCode());
+		System.out.println(e1.hashCode());
 		
 		Student copy=s5.clone();
 		System.out.println(s5);
