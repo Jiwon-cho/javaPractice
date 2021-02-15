@@ -20,7 +20,8 @@ public class Main2 {
 		//animal
 		
 		animal=new Dog();
-		animal.bark();		
+		animal.bark();
+		animal.move();
 		animal=new Cat();
 		animal.bark();
 //		
@@ -40,8 +41,8 @@ public class Main2 {
 		animal.move();
 		//공통 작업에서 능률을 향상
 		
-	
-		
+		int age=animal.age;
+		System.out.println(age);
 		
 		
 		

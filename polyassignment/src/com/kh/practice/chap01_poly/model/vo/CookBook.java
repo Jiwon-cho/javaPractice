@@ -15,7 +15,8 @@ public class CookBook extends Book{
 	
 	@Override
 	public String toString() {
-		return getTitle()+" "+getAuthor()+" "+getPublisher()+" "+coupon;
+		
+		return "CookBook[Book [title="+getTitle()+", author="+getAuthor()+", publisher="+getPublisher()+"],  coupon="+coupon+"]";
 	}
 	
 

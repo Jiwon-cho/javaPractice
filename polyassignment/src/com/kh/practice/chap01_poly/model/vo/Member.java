@@ -53,7 +53,7 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return name+" "+age+" "+gender;
+		return "Member [name="+name+", age="+age+", gender="+gender+", couponCount="+couponCount+"]";
 	}
 
 }

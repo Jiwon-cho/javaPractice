@@ -17,5 +17,10 @@ public class Lion extends Animal implements AnimalBarkAble {
 	@Override
 	public void bark() {
 		System.out.println("æÓ»Ô");
+	
+		
 	}
+	
+	
+	
 }

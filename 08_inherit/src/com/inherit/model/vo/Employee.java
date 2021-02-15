@@ -92,7 +92,7 @@ public class Employee extends Person{
 	
 	@Override
 	public String toString() {
-		return getName()+" "+getAge()+" "+getGender()+" "+getAddress()+" "
+		return getName()+" "+getAge()+" "+super.gender+" "+getAddress()+" "
 				+getPhone()+" "+getWeight()+" "+getHeight()+" "+department+" "+job+" "+salary;
 	}
 		

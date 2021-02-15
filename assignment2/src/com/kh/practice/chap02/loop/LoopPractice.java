@@ -185,7 +185,28 @@ public class LoopPractice {
 			}
 		} while (su2 > 9);
 
-	}
+//	int su=0;
+//	while(su<10) {
+//		System.out.println("숫자: ");
+//		int su2=sc.nextInt();
+//	if(su2>9) {
+//		System.out.println("9이하의 숫자만 입력해주세요.");
+//		su=su2;
+//	}else {
+//		for(int i=su;i<10;i++) {
+//			System.out.println("==== " + i + "단 ====");
+//			for (int j = 1; j <= 9; j++) {
+//				System.out.println(i + " * " + j + "=" + (i * j));
+//		}
+//	}
+	}	
+		
+		
+		
+		
+		
+		
+	
 
 	public void practice11() {
 		Scanner sc = new Scanner(System.in);
@@ -306,9 +327,6 @@ public class LoopPractice {
 		}
 		
 	}
-	public void practice15() {
-		
-		
-	}
+	
 
 }

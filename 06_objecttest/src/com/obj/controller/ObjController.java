@@ -24,11 +24,15 @@ public class ObjController {
 		//mv.age=18;//default 접근제한자.
 		//mv.height=190.3//private 접근 제한자
 		System.out.println(mv.name);
+		mv.name="가나다";
+		System.out.println(MemberVariable.gameTitle);
+		MemberVariable.gameTitle="롤";
+		System.out.println(MemberVariable.gameTitle);
 		
 		MemberVariable mv1=new MemberVariable();
 		mv1.name="유병승";
 		System.out.println(mv1.name);
-	
+		System.out.println(MemberVariable.gameTitle);
 		
 		
 //		System.out.println(mv.age);//접근제한자로 접근이 제한된 변수는 메소드를 이용함.
@@ -36,6 +40,7 @@ public class ObjController {
 		//static 변수는 heap 이 아닌 static 영역에 존재하며 멥버변수와 접근하는 방식이 다름
 		//클래스를 생성 하지 않고 사용이 가능
 		MemberVariable.gameTitle="메이플";
+		System.out.println(MemberVariable.gameTitle);
 		//MemberVariable.bonus=0.2;//메소드를 이용해서 접근
 		System.out.println(MemberVariable.bonus);
 		MemberVariable mv2=new MemberVariable();

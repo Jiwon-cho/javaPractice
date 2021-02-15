@@ -36,6 +36,7 @@ public class MemberVariable {
 		//없다!
 		count=100;//static 변수
 		bonus=22;//static 변수 / 클래스 변수
+		gameTitle="리니지";
 		//age=50;//멤버변수
 		System.out.println("static블록");
 	}

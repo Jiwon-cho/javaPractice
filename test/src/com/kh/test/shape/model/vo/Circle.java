@@ -1,4 +1,4 @@
-package com.figure.model.vo;
+package com.kh.test.shape.model.vo;
 
 public class Circle {
 	private double pi = Math.PI;
@@ -34,8 +34,6 @@ public class Circle {
 	
 	
 	public void draw() {
-		System.out.println("반지름 "+radius+"cm 인 원을 그립니다.");
+		System.out.println("반지름이 "+radius+"cm 인 원을 그립니다.");
 	}
-	
-
 }
