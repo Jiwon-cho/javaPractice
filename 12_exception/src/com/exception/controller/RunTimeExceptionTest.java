@@ -90,8 +90,13 @@ catch(FileNotFoundException e) {
 	
 System.out.println("나오나?");
 new ThrowsTest().tryWithResourceTest();
-	
-	
+
+//내가 만든 익셉션 발생시키기
+try {
+throw new MyException("내가 만든것");
+}catch(MyException e) {
+	e.printStackTrace();
+}
 	
 	
 }
