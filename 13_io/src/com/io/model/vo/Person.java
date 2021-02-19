@@ -1,6 +1,17 @@
 package com.io.model.vo;
 
-public class Person {
+import java.io.Serializable;
+
+//직렬화처리하기
+public class Person implements Serializable {
+	
+	
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private int age;
 	private char gender;

@@ -3,14 +3,17 @@ package com.student.view;
 import java.util.Scanner;
 
 import com.student.controller.StudentController;
+import com.student.model.dao.StudentDao;
 import com.student.model.vo.Student;
 
 public class MainView {
+	private StudentDao dao=new StudentDao();
 	
 	//메인화면을 출력해주는 메소드 구현
 	public void mainMenu(StudentController stc) {
 	//StudentController stc=new StudentController();
 	while(true) {
+		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("======학생관리 프로그램=====");
 		System.out.println("1.전체 학생 조회");
@@ -19,6 +22,8 @@ public class MainView {
 		System.out.println("4.학생정보수정(나이,주소)");//기준 이름
 		System.out.println("5.성적입력");
 		System.out.println("7.학생성적출력(합계,평균)");
+		System.out.println("8.데이터 저장");
+		System.out.println("9.데이터 불러오기");
 		System.out.println("0. 프로그램 종료");
 		System.out.print("선택: ");
 		int cho=sc.nextInt();
@@ -29,7 +34,9 @@ public class MainView {
 		case 4: stc.changeInfo();break;
 		case 5: stc.studentRecord();break;
 		case 7: stc.studentCal();break;
-		case 0:System.out.println("프로그램을 종료합니다");return;
+		case 8:stc.studentSave();break;
+		case 9:stc.studentLoad();break;
+		case 0:stc.studentSave();System.out.println("프로그램을 종료합니다");return;
 		//return 은 메소드 자체를 끝내버리는 것 
 		}
 	}

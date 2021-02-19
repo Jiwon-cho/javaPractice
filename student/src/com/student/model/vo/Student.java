@@ -1,8 +1,18 @@
 package com.student.model.vo;
 
+import java.io.Serializable;
+
 //학생정보를 저자하는객체
-public class Student {
-// public static int count=0;	
+public class Student implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4993239316361421894L;
+/**
+	 * 
+	 */
+
+	// public static int count=0;	
 	private String name;//학생 이름, 2글자 이상
 	private int age;//학생 나이, 음수는 대입금지
 	private char gender;//

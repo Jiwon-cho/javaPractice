@@ -15,5 +15,8 @@ public interface StudentDaoInter {
 	String studentCal(Student s);
 	
 	boolean studentRecord(Student s);
+	public void saveStudent();
+	public void loadStudent();
+	
 	
 }

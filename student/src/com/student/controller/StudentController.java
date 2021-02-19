@@ -9,12 +9,31 @@ public class StudentController {
 	//view 와 dao 메소드를 호출
 	
 	private StudentDaoInter dao=new StudentDao();
-	//=new StudentDao();//선언을 해준 것
+	private StudentDao dao2=new StudentDao();//선언을 해준 것
 	private MainView view=new MainView();
 	public void mainMenu() {
 		//메인 화면을 호출해주는 기능
+		studentLoad();
 		view.mainMenu(this);
+		
 	}
+	
+	
+	public void studentSave() {
+		dao.saveStudent();
+		
+	}
+	
+	
+	public void studentLoad() {
+		dao.loadStudent();
+	}
+	
+	
+	
+	
+	
+	
 	public void studentCal() {
 		searchAll();
 		Student s=view.calCul();

@@ -1,6 +1,7 @@
 package com.io.controller;
 
 import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -10,6 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
@@ -163,7 +165,43 @@ public class FileSubStreamTest {
 		
 		
 		
+		//좀 더 효율적으로
+		public void objectOutputSTreamTest() {
+			//생성된 객체를 한번에 저장하자
+//			Person p=new Person("유병승",19,'남',180.5);
+			Person[] persons=new Person[3];
+			persons[0]=new Person("유병승",19,'남',180.5);
+			persons[1]=new Person("유동현",26,'남',196.4);
+			persons[2]=new Person("정우석",26,'남',199.6);
+			
+			try(ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("obj.data"))){
+			//for(int i=0;i<persons.length;i++) {	
+				oos.writeObject(persons);
+			//}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
 		
+		public void objectInputStreamTest() {
+			Person[] persons=new Person[3];
+			//Person p=null;
+			try(ObjectInputStream ois=new ObjectInputStream(new FileInputStream("obj.data"))) {
+			//for(int i=0;i<3;i++) {	
+				persons=(Person[])ois.readObject();
+				
+		//	}
+			for(Person p:persons) {
+				System.out.println(p);
+			}
+			}catch(ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
 		
 		
 		

@@ -1,11 +1,19 @@
 package com.student.model.dao;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 import com.student.common.StudentDaoInter;
 import com.student.model.vo.Student;
 
 public class StudentDao implements StudentDaoInter{
 	// 프로그램에서 동작하는 데이터저장 역할
 	private Student[]st=new Student[5];
+	private static int studentCount=0;//studentindex를 관리
 	//private Students[] students=new Student[5] 이런식으로 하면 밑에 student 있어서
 	// 밑에 이 student 쓸꺼면 this.student 써야됨
 	
@@ -15,7 +23,49 @@ public class StudentDao implements StudentDaoInter{
 //	private Student s3;
 //	private Student s4;
 //	private Student s5;
-
+	@Override
+	public void saveStudent() {
+		
+		try(ObjectOutputStream obo =new ObjectOutputStream(new FileOutputStream("Student.txt"))){
+			obo.writeObject(st);
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	@Override
+	public void loadStudent() {
+	File f=new File("Student.txt");
+	if(f.exists()) {
+	try(ObjectInputStream ois=new ObjectInputStream(new FileInputStream(f))) {
+			st=(Student[])ois.readObject();
+		for(Student s:st) {
+			System.out.println(s);
+		}
+			
+	}catch(ClassNotFoundException e) {
+		e.printStackTrace();
+	}catch(IOException e) {
+		e.printStackTrace();
+	}
+	
+	}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// 매개변수로 전달된 저장소(멤버변수)에 저장하는 기능
 	// 인자값->받아오는 데이터
 	@Override
@@ -116,14 +166,15 @@ public class StudentDao implements StudentDaoInter{
 	@Override
 	public boolean insertStudent(Student s) {
 		// 1.비어있는 변수를 찾아서 저장
-		boolean flag = false;
-	
-		for(int i=0;i<5;i++) {
-		if (st[i] == null) {
-			// s1변수가 비어있다
-			st[i] = s;
-			flag=true;
-			break;
+		boolean flag=true;
+//		boolean flag = false;
+//	
+//		for(int i=0;i<5;i++) {
+//		if (st[i] == null) {
+//			// s1변수가 비어있다
+//			st[i] = s;
+//			flag=true;
+//			break;
 //		} else if (s2 == null) {
 //			s2 = s;
 //
@@ -141,8 +192,18 @@ public class StudentDao implements StudentDaoInter{
 //			flag = false;
 //		}
 		//return flag;
-		}
-		}
+	try {
+		st[studentCount++]=s;
+	}catch(ArrayIndexOutOfBoundsException e) {
+		//배열 의 길이를 증가
+		//단 이전값을 유지하면서.
+		Student[] temp=new Student[st.length+10];
+		System.arraycopy(st,0,temp,0,st.length);
+		st=temp;
+		st[studentCount]=s;
+
+}
+
 		return flag;
 	}
 
@@ -150,7 +211,7 @@ public class StudentDao implements StudentDaoInter{
 	public String searchAll() {
 		// 멤버변수에 있는 데이터를 반환.
 		String students = "";
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<st.length;i++) {
 		if (st[i] != null) {
 			students += st[i] + "\n";
 		}
@@ -188,7 +249,7 @@ public class StudentDao implements StudentDaoInter{
 //		if (s5 != null&&s5.getGender()==gender) {
 //			students += s5.studentInfo() + "\n";
 //		}
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<st.length;i++) {
 			if (st[i] != null&&st[i].getGender()==gender) {
 				students += st[i] + "\n";
 			}
@@ -221,7 +282,7 @@ public class StudentDao implements StudentDaoInter{
 //		}else {
 //			flag=false;
 //		}
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<st.length;i++) {
 			if(st[i]!=null&&st[i].getName().equals(s.getName())) {
 				st[i].setAge(s.getAge());
 				st[i].setAddress(s.getAddress());

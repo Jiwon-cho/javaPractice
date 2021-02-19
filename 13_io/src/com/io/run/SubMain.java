@@ -11,7 +11,9 @@ public class SubMain {
 //		fss.bufferdReaderTest();
 		//fss.dataOutputStreamTest();
 		//fss.dataInputStreamTest();
-		fss.personData();
-		fss.personLoad();
+//		fss.personData();
+//		fss.personLoad();
+		fss.objectOutputSTreamTest();
+		fss.objectInputStreamTest();
 	}
 }
