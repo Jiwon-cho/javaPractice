@@ -76,6 +76,7 @@ public class DateController {
 		System.out.println(d1);
 		
 		gc=new GregorianCalendar(1993,6-1,13);
+		System.out.println(sdf2.format(gc.getTimeInMillis()));
 		System.out.println(sdf2.format(new Date(gc.getTimeInMillis())));
 		
 		String bd="1998-04-19";
