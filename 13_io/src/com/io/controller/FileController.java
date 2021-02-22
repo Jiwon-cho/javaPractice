@@ -88,12 +88,12 @@ public class FileController {
 	//폴더에 전체 파일을 가져오는 메소드
 	File rootDir=new File("c:\\Users\\user");
 	String[] fileNames=rootDir.list();//user 에 있는 모든 파일/폴더
-//	for(String name:fileNames) {
+	for(String name:fileNames) {
 //		//System.out.println(s);
-//		File temp=new File(rootDir.getAbsoluteFile(),name);
+		File temp=new File(rootDir.getAbsoluteFile(),name);
 //		//new File(rootDir.getAbsoluteFile()+"/"+name);
-//		if(temp.isFile())System.out.println(temp.getName());
-//	}
+		if(temp.isFile())System.out.println(temp.getName());
+	}
 	File[] files=rootDir.listFiles();
 //	for(File temp: files) {
 //		if(temp.isFile())System.out.println(temp.getName());

@@ -2,7 +2,7 @@ package com.model.vo;
 
 import java.util.Date;
 
-public class Food {
+public class Food implements Comparable{
 	private String name;
 	private int price;
 	private String category;
@@ -70,6 +70,16 @@ public class Food {
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public int compareTo(Object f) {
+		if(f instanceof Food) {
+			Food temp=(Food)f;
+			return name.compareTo(temp.name);//이름 오름차순으로 정렬
+			//return price-temp.price; // 가격 순
+		}
+		return 0;
 	}
 	
 }

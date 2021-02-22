@@ -128,7 +128,7 @@ public class FileSubStreamTest {
 		try(Scanner sc=new Scanner(System.in);DataOutputStream dis=new DataOutputStream(new FileOutputStream("person.data") );){
 					//DataOutputStream dis=new DataOutputStream(new FileOutputStream("person.data") )){
 				for(int i=0;i<3;i++) {
-					Person p=new Person();
+					//Person p=new Person();
 					System.out.println("이름: ");
 					dis.writeUTF(sc.next());
 					System.out.println("나이: ");
