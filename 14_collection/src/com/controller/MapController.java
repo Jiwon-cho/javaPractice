@@ -1,7 +1,9 @@
 	package com.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -102,7 +104,10 @@ public class MapController {
 			System.out.println(c.getName()+" "+ c.getPrice()+" "+c.getPerson());
 		}
 	}
-		
+	
+	//values() : Map/Collection
+	List list=new ArrayList(car.values()); //Collection으로 반환해줌
+	System.out.println();	
 		
 		
 		
