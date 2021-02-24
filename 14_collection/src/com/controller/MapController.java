@@ -107,7 +107,7 @@ public class MapController {
 	
 	//values() : Map/Collection
 	List list=new ArrayList(car.values()); //Collection으로 반환해줌
-	System.out.println();	
+	System.out.println(list);	
 		
 		
 		

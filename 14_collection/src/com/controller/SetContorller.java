@@ -64,7 +64,7 @@ public class SetContorller {
 		
 		HashSet cars=new HashSet();
 		cars.add(new Car("제네시스","검정",80000000,4));
-		cars.add(new Car("티코","흰색",8000000,2));
+		cars.add(new Car("벤틀리","회색",8000000,2));
 		cars.add(new Car("포르쉐","빨강",200000000,4));
 		cars.add(new Car("마티즈","황금",40000000,4));
 		cars.add(new Car("벤틀리","회색",380000000,4));
@@ -128,11 +128,11 @@ public class SetContorller {
 //		tSet.add(4);
 //		tSet.add(2);
 //		tSet.add(1);
-		tSet.add(new Car("제네시스","검정",80000000,4));
-		tSet.add(new Car("티코","흰색",8000000,2));
-		tSet.add(new Car("포르쉐","빨강",200000000,4));
-		tSet.add(new Car("마티즈","황금",40000000,4));
-		tSet.add(new Car("벤틀리","회색",380000000,4));
+		tSet.add(new Car("제네시스","검정",80,4));
+		tSet.add(new Car("티코","흰색",8,2));
+		tSet.add(new Car("포르쉐","빨강",200,4));
+		tSet.add(new Car("마티즈","황금",40,4));
+		tSet.add(new Car("벤틀리","회색",380,4));
 		
 		System.out.println(tSet);
 		Iterator it3=tSet.descendingIterator();

@@ -4,8 +4,8 @@ import java.util.Comparator;
 
 import com.model.vo.Food;
 
-public class FoodCalAsc implements Comparator <Food>{
-	
+public class FoodCalAsc implements Comparator<Food> {
+
 	@Override
 	public int compare(Food f1, Food f2) {
 //		if(o2 instanceof Food && o1 instanceof Food) {
@@ -18,10 +18,13 @@ public class FoodCalAsc implements Comparator <Food>{
 //			
 //		}
 //			return 0;
-		
-			if(f1.getCalorie()<f2.getCalorie()) 
-				return +1; else if(f1.getCalorie(	)>f2.getCalorie())return -1;
-				else return 0; 
-	
+
+		if (f1.getCalorie() < f2.getCalorie())
+			return +1;
+		else if (f1.getCalorie() > f2.getCalorie())
+			return -1;
+		else
+			return 0;
+
 	}
 }

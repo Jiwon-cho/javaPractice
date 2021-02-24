@@ -47,7 +47,7 @@ public class ListController {
 		// 과일들. Fruit 클래스를 보관
 		ArrayList foods = new ArrayList();
 		foods.add(new Food("슌대국", 7000, "국밥", 1000, null));
-		foods.add(new Food("감자전", 8000, "전", 650, new Date(new GregorianCalendar(2021, 02, 20).getTimeInMillis())));
+		foods.add(new Food("감자전", 8000, "전", 650, new Date(new GregorianCalendar(2021, 01, 20).getTimeInMillis())));
 		foods.add(new Food("계란초밥", 1000, "초밥", 200, null));
 
 		System.out.println(foods);
@@ -155,6 +155,10 @@ public class ListController {
 			System.out.println(f1);
 		}
 		System.out.println("이름 오름 차순 정렬=================");
+//		
+//		for (Object f1 : foods) {
+//			System.out.println(f1);
+//		}
 		// 2.문자열 정렬하기 음식이름으로 정렬하기
 		// -오름차순으로 정렬하기//알파벳 순서대로
 		// String 객체에서 문자열을 비교해주는 메소드를 만들어 놓음
@@ -175,9 +179,10 @@ public class ListController {
 		// food[0].compareTo(food[1]);
 
 		System.out.println("===가격순====");
-		for (Object f1 : foods) {
-			System.out.println(f1);
-		}
+//		Collections.sort(foods);
+//		for (Object f1 : foods) {
+//			System.out.println(f1);
+//		}
 
 		// 객체에 대해 정렬
 		// 익명클래스.. 1회용
@@ -189,15 +194,21 @@ public class ListController {
 				return f1.getPrice() - f2.getPrice();
 			}
 		});
+		for (Object f1 : foods) {
+			System.out.println(f1);
+		}
 		// 익명 이기 때문에, 이름 필요 없음 필요한건, 매개변수와 리턴 값 뿐
 		// lambda :(매개변수,..) -> {로직}
 		// @FunctionalInterface -> 추상메소드 한개만 선언된 인터페이스
 		// 기본적으로 Interface 에서 구현해야하는 메소드 구조
 		// int compare(Object o1, Object o2)
-
+		System.out.println("==카테고리 이름순");
 		Collections.sort(foods, (Object o1, Object o2) -> {
 			return ((Food) o1).getCategory().compareTo(((Food) o2).getCategory());
 		});
+		for (Object f1 : foods) {
+			System.out.println(f1);
+		}
 		
 		TestLambda testfilter=(Food temp)->temp.getPrice()>20000;
 		System.out.println("=======람다====");

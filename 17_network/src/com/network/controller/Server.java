@@ -17,7 +17,8 @@ public class Server {
 		int port=9876;
 		
 		//ServerSocket을 생성
-		ServerSocket socket=new ServerSocket(port);
+		ServerSocket socket;
+		socket=new ServerSocket(port);
 		while(true) {
 			//클라이언트 요청 기다리기
 			Socket client=socket.accept();

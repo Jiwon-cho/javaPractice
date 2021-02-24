@@ -28,7 +28,7 @@ public class Movie {
 		ArrayList<String> tit2 = new ArrayList();
 		ArrayList<String> age = new ArrayList();
 		ArrayList<String> rank = new ArrayList();
-		ArrayList<String> rank2 = new ArrayList();
+		//ArrayList<String> rank2 = new ArrayList();
 		for (Element e : elem.select("dt")) {
 			if (!e.className().equals("tit")) {
 				continue;

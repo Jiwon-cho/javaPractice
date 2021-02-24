@@ -14,7 +14,7 @@ public class PropertiesMain {
 		Properties prop = new Properties();
 		// °ª ³Ö±â
 		// setProperty(Key,value)
-		prop.setProperty("emial", "prince0324@naver.com");
+		prop.setProperty("email", "prince0324@naver.com");
 		prop.setProperty("domain", "www.iei.or.kr");
 
 		System.out.println(prop);
