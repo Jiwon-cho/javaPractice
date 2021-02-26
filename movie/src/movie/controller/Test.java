@@ -18,7 +18,7 @@ public class Test {
 
 
  public static void main(String[] args) {
-		String url = "https://movie.naver.com/movie/running/current.nhn#";
+		String url = "http://www.moviechart.co.kr/rank/realtime/index/image";
 		Document doc = null;
 		try {
 			doc = Jsoup.connect(url).get();
@@ -27,65 +27,50 @@ public class Test {
 			e.printStackTrace();
 		}
 
-		Elements elem = doc.select("div.lst_wrap");
-		Elements elem1 = doc.select("dl.info_star");
-		Elements elem2 = doc.select("dl.info_txt1");
+		Elements elem = doc.select("div.movieBox");
+	
 		ArrayList<String> tit = new ArrayList();
 		ArrayList<String> tit2 = new ArrayList();
-		ArrayList<String> age = new ArrayList();
-		ArrayList<String> rank = new ArrayList();
-		ArrayList<String> category = new ArrayList();
-		for (Element e : elem.select("dt")) {
-			if (!e.className().equals("tit")) {
-				continue;
-			}
-			tit.add(e.text());
-
-		}
-
-		for (int i = 0; i < tit.size(); i++) {
-			if (tit.get(i).contains("청소년 유해물")) {
-				String a = tit.get(i).replace("유해물", "관람불가");
-				tit.set(i, a);
-			}
-
-		}
-
-		for (int i = 0; i < tit.size(); i++) {
-			String a = tit.get(i).substring(0, tit.get(i).indexOf("가") + 1);
-			String b = tit.get(i).substring(tit.get(i).indexOf("가") + 2);
-			age.add(a);
-			tit2.add(b);
-
-		}
-
-		for (Element l : elem1.select("span")) {
-			if (!l.className().equals("num")) {
-				continue;
-			}
-			rank.add(l.text());
-
-		}
-		for (Element l : elem1.select("span")) {
-			if (!l.className().equals("num")) {
-				continue;
-			}
-			rank.add(l.text());
-
-		}
-//		for(int i=0;i<50;i++) {
-//			System.out.println(elem2.select("span").get(i).getElementsByAttribute("href").text());
+		//System.out.println(elem);
+//		String a;
+//		for(Element l:elem.select("div")) {
+//			a=l.getElementsByAttribute("href").attr("href");
+//		if(a.contains("detail")) {
+//			System.out.println(l.getElementsByAttribute("href").text());
 //		}
-		String a;
-		for (Element l : elem2.select("span")) {
-			a=l.getElementsByAttribute("href").attr("href");
-		if(a.contains("genre")){	
-			category.add(l.getElementsByAttribute("href").text());
+//		}
+		for(Element l:elem.select("div")) {
+			if(!l.className().equals("text")) {
+				continue;
+			}
+			tit.add(l.text());
+			
 		}
-		}
-		System.out.println(category.size());
-		System.out.println(age.size());
-		System.out.println(tit2.size());
+		
+	for(int i=0;i<tit.size();i++) {
+		String a=tit.get(i).substring(0,tit.get(i).indexOf("개봉"));
+		tit2.add(a);
+	}
+	for(String s:tit2) {
+		System.out.println(s);
+	}
+//		for(Element l:elem.select("div")) {
+//			if(!l.className().equals("ex")) {
+//				continue;
+//			}
+//			System.out.println(l.text());
+//		}
+		//for(Element l: elem.select(url))
+		//		String a;
+//		for (Element l : elem2.select("span")) {
+//			a=l.getElementsByAttribute("href").attr("href");
+//		if(a.contains("genre")){	
+//			category.add(l.getElementsByAttribute("href").text());
+//		}
+//		}
+//		System.out.println(category.size());
+//		System.out.println(age.size());
+//		System.out.println(tit2.size());
 
 //		String[][] movie = new String[age.size()][3];
 //		for (int i = 0; i < age.size(); i++) {
