@@ -24,11 +24,14 @@ public class Movie {
 
 		Elements elem = doc.select("div.lst_wrap");
 		Elements elem1 = doc.select("dl.info_star");
+		Elements elem2 = doc.select("dl.info_txt1");
 		ArrayList<String> tit = new ArrayList();
 		ArrayList<String> tit2 = new ArrayList();
 		ArrayList<String> age = new ArrayList();
 		ArrayList<String> rank = new ArrayList();
+		ArrayList<String> category = new ArrayList();
 		//ArrayList<String> rank2 = new ArrayList();
+		System.out.println(elem2);
 		for (Element e : elem.select("dt")) {
 			if (!e.className().equals("tit")) {
 				continue;

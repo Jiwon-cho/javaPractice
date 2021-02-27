@@ -31,6 +31,8 @@ public class Test {
 	
 		ArrayList<String> tit = new ArrayList();
 		ArrayList<String> tit2 = new ArrayList();
+		ArrayList<String> all = new ArrayList();
+		ArrayList<String> all2 = new ArrayList();
 		//System.out.println(elem);
 //		String a;
 //		for(Element l:elem.select("div")) {
@@ -51,15 +53,29 @@ public class Test {
 		String a=tit.get(i).substring(0,tit.get(i).indexOf("°³ºÀ"));
 		tit2.add(a);
 	}
-	for(String s:tit2) {
-		System.out.println(s);
+
+	
+		for(Element l:elem.select("div")) {
+			if(!l.className().equals("ex")) {
+				continue;
+			}
+			all.add(l.text());
+		}
+		String a;
+	for(int i=0;i<all.size();i++) {
+		a=all.get(i).replace(" | ","/");
+		all2.add(a);
+		//System.out.println(a);
 	}
-//		for(Element l:elem.select("div")) {
-//			if(!l.className().equals("ex")) {
-//				continue;
-//			}
-//			System.out.println(l.text());
-//		}
+		String[][]tt=new String[30][];
+		for(int i=0;i<all2.size();i++) {
+			tt[i]=all2.get(i).split("/");
+		}
+		for(int i=0;i<30;i++) {
+			for(int j=0;j<6;j++) {
+				System.out.println(tt[i][j]);
+			}
+		}
 		//for(Element l: elem.select(url))
 		//		String a;
 //		for (Element l : elem2.select("span")) {
