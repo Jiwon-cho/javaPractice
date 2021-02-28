@@ -73,7 +73,7 @@ public static void main(String[] args) {
 				movie[i][1] = tit2.get(i);
 				movie[i][2] = rank.get(i);
 			}
-		
+		//너무 어렵다. 나는 어떻게 데이터를 정재해야할까
 
 		}
 
