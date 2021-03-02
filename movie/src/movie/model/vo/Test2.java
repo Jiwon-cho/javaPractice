@@ -75,6 +75,8 @@ public static void main(String[] args) {
 			}
 		//너무 어렵다. 나는 어떻게 데이터를 정재해야할까
 			//시간이 너무 없다 머리 빠개질꺼같다.
+		//어떻게 하면 CATEGORY 를 넣을 수 있을까 머이아프네...
+			
 
 		}
 
