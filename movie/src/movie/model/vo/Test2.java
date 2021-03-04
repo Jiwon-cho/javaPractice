@@ -64,8 +64,17 @@ public static void main(String[] args) {
 				rank.add(l.text());
 
 			}
+			
+			for(Element l: elem2.select("span")) {
+				if(!l.className().equals("link_txt")) {
+					continue;
+				}
+				System.out.println(l.text());
+			}
+			
+			
 		
-			System.out.println(category);
+			
 
 			String[][] movie = new String[age.size()][3];
 			for (int i = 0; i < age.size(); i++) {
