@@ -65,23 +65,33 @@ public static void main(String[] args) {
 
 			}
 			
-			for(Element l: elem2.select("span")) {
-				if(!l.className().equals("link_txt")) {
-					continue;
-				}
-				System.out.println(l.text());
+		
+					String a;
+			for (Element l : elem2.select("span")) {
+				a=l.getElementsByAttribute("href").attr("href");
+			if(a.contains("genre")){	
+				category.add(l.getElementsByAttribute("href").text());
 			}
-			
+			}
 			
 		
 			
 
-			String[][] movie = new String[age.size()][3];
-			for (int i = 0; i < age.size(); i++) {
+			String[][] movie = new String[50][4];
+			for (int i = 0; i < 50; i++) {
 				movie[i][0] = age.get(i);
 				movie[i][1] = tit2.get(i);
 				movie[i][2] = rank.get(i);
+				movie[i][3]=category.get(i);
+				
 			}
+	for(int i=0;i<50;i++) {
+		for(int j=0;j<4;j++) {
+		System.out.print(movie[i][j]+" ");
+		
+	}
+		System.out.println();
+	}
 		//너무 어렵다. 나는 어떻게 데이터를 정재해야할까
 			//시간이 너무 없다 머리 빠개질꺼같다.
 		//어떻게 하면 CATEGORY 를 넣을 수 있을까 머이아프네...
