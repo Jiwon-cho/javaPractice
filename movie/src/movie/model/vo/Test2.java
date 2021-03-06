@@ -96,7 +96,7 @@ public static void main(String[] args) {
 			//시간이 너무 없다 머리 빠개질꺼같다.
 		//어떻게 하면 CATEGORY 를 넣을 수 있을까 머이아프네...
 		//Movie().mainmenu();	
-
+	//50까지 해서 해결.
 		}
 
 	}
