@@ -97,6 +97,8 @@ public static void main(String[] args) {
 		//어떻게 하면 CATEGORY 를 넣을 수 있을까 머이아프네...
 		//Movie().mainmenu();	
 	//50까지 해서 해결.
+	//정처기 합격!
+
 		}
 
 	}
