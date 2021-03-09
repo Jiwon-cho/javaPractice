@@ -25,13 +25,13 @@ public class Movie {
 		Elements elem = doc.select("div.lst_wrap");
 		Elements elem1 = doc.select("dl.info_star");
 		Elements elem2 = doc.select("dl.info_txt1");
+		
 		ArrayList<String> tit = new ArrayList();
 		ArrayList<String> tit2 = new ArrayList();
 		ArrayList<String> age = new ArrayList();
 		ArrayList<String> rank = new ArrayList();
 		ArrayList<String> category = new ArrayList();
 		//ArrayList<String> rank2 = new ArrayList();
-		System.out.println(elem2);
 		for (Element e : elem.select("dt")) {
 			if (!e.className().equals("tit")) {
 				continue;
@@ -63,14 +63,29 @@ public class Movie {
 			rank.add(l.text());
 
 		}
+		
+	
+				String a;
+		for (Element l : elem2.select("span")) {
+			a=l.getElementsByAttribute("href").attr("href");
+		if(a.contains("genre")){	
+			category.add(l.getElementsByAttribute("href").text());
+		}
+		}
+		
+	
+		
 
-		String[][] movie = new String[age.size()][3];
-		for (int i = 0; i < age.size(); i++) {
+		String[][] movie = new String[50][4];
+		for (int i = 0; i < 50; i++) {
 			movie[i][0] = age.get(i);
 			movie[i][1] = tit2.get(i);
 			movie[i][2] = rank.get(i);
+			movie[i][3]=category.get(i);
+			
 		}
-		return movie;
+
+	return movie;
 
 	}
 

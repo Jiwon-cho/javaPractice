@@ -85,13 +85,7 @@ public static void main(String[] args) {
 				movie[i][3]=category.get(i);
 				
 			}
-	for(int i=0;i<50;i++) {
-		for(int j=0;j<4;j++) {
-		System.out.print(movie[i][j]+" ");
-		
-	}
-		System.out.println();
-	}
+
 		
 
 		}

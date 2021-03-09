@@ -21,7 +21,9 @@ public class WrapperTestController {
 		//age2=Integer.parseInt("19 ");
 		boolean flag=Boolean.parseBoolean("true");
 		test(age2);//<-wrapper 클래스 라서 됨
-	
+		String a="1990";
+		String b=a.substring(0,4);
+		System.out.println(b);
 	}
 	public static void test(Number obj) {//<-넘버가 부모 자료형이고 그거의 위가 오브젝트라 둘다 됨(Object obj) {
 		System.out.println(obj instanceof Integer);
