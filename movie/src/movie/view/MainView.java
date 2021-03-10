@@ -10,6 +10,10 @@ public class MainView {
 	private MovieController mc=new MovieController();
 	private Movie m=new Movie();
 	
+	public void logIn() {
+		System.out.println("1.로그인");
+	}
+	
 	public void mainMenu() {
 		String [][] movie=m.main();
 		System.out.println("[TOP 10 영화]");
@@ -18,9 +22,10 @@ public class MainView {
 		}
 		while(true) {
 			System.out.println("=====영화 메뉴====");
-			System.out.println("1.연령으로 검색");
-			System.out.println("2.평점으로 검색");
-			System.out.println("3.제목으로 검색");
+			System.out.println("1.영화 검색");
+			System.out.println("2.영화 추천");
+			System.out.println("3.로그 아웃");
+			System.out.println("4.검색");
 			System.out.println("0.프로그램 종료");
 			System.out.println("메뉴 선택: ");
 			int cho=sc.nextInt();
