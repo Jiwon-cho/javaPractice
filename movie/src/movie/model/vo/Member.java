@@ -1,6 +1,13 @@
 package movie.model.vo;
 
-public class Member {
+import java.io.Serializable;
+
+public class Member implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3413553751553730842L;
 	private String name;
 	private String idnumber;
 	private String id;
@@ -8,6 +15,7 @@ public class Member {
 	/**
 	 * 
 	 */
+	
 	public Member() {
 		super();
 		// TODO Auto-generated constructor stub
