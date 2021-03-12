@@ -8,10 +8,10 @@ import movie.model.vo.Movie;
 public class MovieController extends Movie{
 	private Movie m=new Movie();
 	private Scanner sc=new Scanner(System.in);
-	
+	private String movie[][]=m.main();
 	
 	public void searchName(String name) {
-		String movie[][]=m.main();
+		
 		boolean flag = false;
 		for (int i = 0; i < movie.length; i++) {
 
