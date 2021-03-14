@@ -44,7 +44,7 @@ public class MovieController extends Movie{
 	}
 	
 	
-	
+	//이따가 또 커밋해야지
 	
 
 }
