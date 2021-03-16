@@ -1,24 +1,26 @@
 package movie.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import movie.controller.MovieController;
+import movie.dao.MovieDao;
 import movie.model.vo.Movie;
 
 public class MainView {
 	private Scanner sc = new Scanner(System.in);
 	private MovieController mc=new MovieController();
-	private Movie m=new Movie();
+	 private static MovieDao dao = MovieDao.getInstance();
 	
 	public void logIn() {
 		System.out.println("1.로그인");
 	}
 	
 	public void mainMenu() {
-		String [][] movie=m.main();
+		ArrayList<Movie> movieList = dao.GetMovieInfo();
 		System.out.println("[TOP 10 영화]");
 		for(int i=0;i<10;i++) {
-			System.out.println(""+(i+1)+". "+movie[i][1]);
+			System.out.println(""+(i+1)+". "+movieList.get(i).getTit());
 		}
 		while(true) {
 			System.out.println("=====영화 메뉴====");
@@ -30,7 +32,7 @@ public class MainView {
 			System.out.println("메뉴 선택: ");
 			int cho=sc.nextInt();
 			switch(cho) {
-			case 1: break;
+			case 1:search(); break;
 			case 2: break;
 			case 3: break;
 			case 0: System.out.println("프로그램이 종료되었습니다.");return;
@@ -39,12 +41,28 @@ public class MainView {
 		}
 		
 		
-		
-		
-//		System.out.println("찾고자 하는 영화의 이름을 입력하시오: ");
-//		String name = sc.next().trim().replace(" ", "");
-//		mc.searchName(name);
-		
+
+	}
+	
+	public void search() {
+		System.out.println("1.현재 상영영화 전체 검색");
+		System.out.println("2.이름으로 검색");
+		System.out.println("3.연령으로 검색");
+		System.out.println("4.장르로 검색");
+		System.out.print("메뉴 선택: ");
+		switch(sc.nextInt()) {
+		case 1:mc.searchAll();break;
+		case 2:mc.searchName();;break;
+		case 3:break;
+		case 4:break;
+		default: System.out.println("잘못 입력하였습니다.");break;
+		}
 	}
 
+//	public String nameSearch() {
+//		System.out.println("영화 제목을 적으시오: ");
+//		return sc.next();
+//	}
+//	
+	
 }

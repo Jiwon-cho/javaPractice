@@ -1,15 +1,19 @@
-package movie.model.vo;
+package movie.dao;
 
-import java.util.*;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import movie.model.vo.Movie;
+
 public class MovieDao{
    private static String url = "https://movie.naver.com/movie/running/current.nhn#";
    private static MovieDao movieDao;
+   
    
    private MovieDao() {}
    
@@ -38,8 +42,8 @@ public class MovieDao{
       Elements articles = doc.select("#content > div.article > div:nth-child(1) > div.lst_wrap > ul > li");
       for(Element element: articles) {
          Movie movie = new Movie();
-         movie.setTit(element.select("dl > dt > span").text());
-         movie.setTit2(element.select("dl > dt > a").text());
+//         movie.setTit(element.select("dl > dt > span").text());
+         movie.setTit(element.select("dl > dt > a").text());
          movie.setAge(element.select("dl > dt > span").text());         
          String temp = element.select("dl.info_txt1").select("span").text();      
          movie.setCate(temp.substring(0,temp.indexOf("|")));
