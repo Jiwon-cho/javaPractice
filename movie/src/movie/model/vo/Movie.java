@@ -12,7 +12,9 @@ import org.jsoup.select.Elements;
 
 public class Movie {
 
-	public String[][] main() {
+	public static void main(String[] args) {
+		
+	
 		String url = "https://movie.naver.com/movie/running/current.nhn#";
 		Document doc = null;
 		try {
@@ -24,8 +26,14 @@ public class Movie {
 
 		Elements elem = doc.select("div.lst_wrap");
 		Elements elem1 = doc.select("dl.info_star");
-		Elements elem2 = doc.select("dl.info_txt1");
 		
+		//Elements elem2 = doc.select("li:nth-child(n) > dl > dd:nth-child(3) > dl > dd:nth-child(2) > span.link_txt > a");
+	Elements elem2 = doc.select("dl.info_txt1");
+//	if(elem2!=null) {
+//		System.out.println(elem2);
+//	}else {
+//		System.out.println("아무것도 없다.");
+//	}
 		ArrayList<String> tit = new ArrayList();
 		ArrayList<String> tit2 = new ArrayList();
 		ArrayList<String> age = new ArrayList();
@@ -65,15 +73,20 @@ public class Movie {
 		}
 		
 	
+		
+		
+		
 				String a;
 		for (Element l : elem2.select("span")) {
 			a=l.getElementsByAttribute("href").attr("href");
 		if(a.contains("genre")){	
 			category.add(l.getElementsByAttribute("href").text());
 		}
-		}
 		
-	
+		}
+	for(String s: category) {
+		System.out.println(s);
+	}
 		
 
 		String[][] movie = new String[50][4];
@@ -84,8 +97,14 @@ public class Movie {
 			movie[i][3]=category.get(i);
 			
 		}
+		
+	for(int i=0;i<50;i++) {
+		for(int j=0;j<4;j++) {
+			System.out.println(movie[i][j]);
+		}
+	}
 
-	return movie;
+	//return movie;
 
 	}
 
