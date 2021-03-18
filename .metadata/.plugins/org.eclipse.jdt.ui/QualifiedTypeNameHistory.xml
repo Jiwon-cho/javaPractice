@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.kh.practice.point.model.vo.Rectangle"/>
     <fullyQualifiedTypeName name="com.poly2.common.AnimalBarkAble"/>
     <fullyQualifiedTypeName name="com.poly2.common.FlyAble"/>
     <fullyQualifiedTypeName name="com.kh.hw.member.model.vo.Member"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
 </qualifiedTypeNameHistroy>

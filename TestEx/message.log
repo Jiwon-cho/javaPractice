@@ -1,0 +1,13 @@
+START LOG
+2021-03-18 21:53 [SEVERE] [main] severe Log
+2021-03-18 21:53 [WARNING] [main] warning Log
+2021-03-18 21:53 [INFO] [main] info Log
+END LOG
+START LOG
+2021-03-18 21:56 [SEVERE] [main] severe Log
+2021-03-18 21:56 [WARNING] [main] warning Log
+2021-03-18 21:56 [INFO] [main] info Log
+END LOG
+START LOG
+2021-03-18 22:26 [INFO] [main] test
+END LOG

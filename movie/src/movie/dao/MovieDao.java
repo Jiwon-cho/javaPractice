@@ -12,6 +12,8 @@ import movie.model.vo.Movie;
 
 public class MovieDao{
    private static String url = "https://movie.naver.com/movie/running/current.nhn#";
+   private static String url2 = "https://movie.naver.com/movie/sdb/browsing/bmovie_genre.nhn";
+
    private static MovieDao movieDao;
    
    
@@ -54,5 +56,28 @@ public class MovieDao{
       }
       return list;
    }
+   
+  
+   
+   public  ArrayList<String> GetGenre(){
+	   ArrayList<String>list= new ArrayList<String>();
+	 
+	   Document doc=null;
+	   try {
+	         doc = Jsoup.connect(url2).get();
+	      } catch (IOException e) {
+	         throw new RuntimeException("[Error: Crawling fail : "+  e.getMessage()+"]");         
+	      }
+	   Elements genre=doc.select("table.directory_item_other > tbody > tr > td");
+	   for(Element element: genre) {
+		   list.add(element.select("a").text());
+		   
+	   }
+	
+	   return list;
+   }
+   
+   
+   
 
 }
