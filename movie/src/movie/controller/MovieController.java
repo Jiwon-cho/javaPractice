@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import movie.dao.MovieDao;
 import movie.model.vo.Movie;
-import movie.view.MainView;
 
 public class MovieController {
 	private static MovieDao dao = MovieDao.getInstance();
@@ -56,7 +55,18 @@ public class MovieController {
 			System.out.println("해당 장르의 영화가 없습니다.");}
 	}
 	
-	
+	public void searchRating() {
+		System.out.print("찾고자 하는 평점(대)을 입력하시오: ");
+		double d=sc.nextDouble();
+		int c=(int)d+1;
+		for(int i=0;i<movieList.size();i++) {
+			double a=Double.parseDouble(movieList.get(i).getRating());
+			if(d<=a &&a<c) {
+				System.out.println(movieList.get(i));
+			}
+		}
+		
+	}
 	
 	
 	
