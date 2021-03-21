@@ -14,9 +14,8 @@ public class MovieDao{
    private static String url = "https://movie.naver.com/movie/running/current.nhn#";
    private static String url2 = "https://movie.naver.com/movie/sdb/browsing/bmovie_genre.nhn";
 
-   private static MovieDao movieDao;
-   
-   
+   private static MovieDao movieDao ;
+     
    private MovieDao() {}
    
    public static MovieDao getInstance(){

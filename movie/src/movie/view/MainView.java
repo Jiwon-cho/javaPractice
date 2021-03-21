@@ -9,14 +9,13 @@ import movie.model.vo.Movie;
 
 public class MainView {
 	private Scanner sc = new Scanner(System.in);
-	private MovieController mc=new MovieController();
 	private static MovieDao dao = MovieDao.getInstance();
 	
 	public void logIn() {
 		System.out.println("1.로그인");
 	}
 	
-	public void mainMenu() {
+	public void mainMenu(MovieController mc) {
 		ArrayList<Movie> movieList = dao.GetMovieInfo();
 		System.out.println("[TOP 10 영화]");
 		for(int i=0;i<10;i++) {
@@ -32,7 +31,7 @@ public class MainView {
 			System.out.print("메뉴 선택: ");
 			int cho=sc.nextInt();
 			switch(cho) {
-			case 1:search(); break;
+			case 1:mc.Search(); break;
 			case 2: break;
 			case 3: break;
 			case 0: System.out.println("프로그램이 종료되었습니다.");return;
@@ -44,7 +43,7 @@ public class MainView {
 
 	}
 	
-	public void search() {
+	public void search(MovieController mc) {
 		System.out.println("1.현재 상영영화 전체 검색");
 		System.out.println("2.이름으로 검색");
 		System.out.println("3.평점으로 검색");
@@ -59,6 +58,14 @@ public class MainView {
 		case 0:System.out.println("초기 메뉴로 돌아갑니다.");break;
 		default: System.out.println("잘못 입력하였습니다.");break;
 		}
+	}
+	
+	
+	
+	
+	
+	public void Msg(Object a) {
+		System.out.println(a);
 	}
 
 	

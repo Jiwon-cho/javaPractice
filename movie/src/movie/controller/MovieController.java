@@ -5,18 +5,29 @@ import java.util.Scanner;
 
 import movie.dao.MovieDao;
 import movie.model.vo.Movie;
+import movie.view.MainView;
 
 public class MovieController {
-	private static MovieDao dao = MovieDao.getInstance();
+	private static MovieDao dao = MovieDao.getInstance(); 
 	private static ArrayList<Movie> movieList = dao.GetMovieInfo();
 	private static ArrayList<String> genre = dao.GetGenre();
+	public MainView mv=new MainView();
+
 	Scanner sc = new Scanner(System.in);
-
+	
+	public void MainMovie() {
+		mv.mainMenu(this);
+	}
+	
+	public void Search() {
+		mv.search(this);
+	}
+	
 	public void searchAll() {
-
-		for (Movie movie : movieList) {
-			System.out.println(movie.toString());
-		}
+		mv.Msg(movieList);
+//		for (Movie movie : movieList) {
+//			System.out.println(movie.toString());
+//		}
 	}
 
 	public void searchName() {
