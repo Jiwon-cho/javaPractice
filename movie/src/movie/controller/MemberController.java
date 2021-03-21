@@ -24,18 +24,18 @@ public class MemberController {
 		}
 	}
 	
-	public void login(String id,String pw) {
-		dao.loadMember();
-		LoginView lv=new LoginView();
-		boolean flag=dao.loginMovie(id, pw);
-		if(flag==true) {
-			new MainView().mainMenu();
-		}else {
-			System.out.println("로그인에 실패하였습니다.");
-			lv.initialView();
-		}
-		
-	}
+//	public void login(String id,String pw) {
+//		dao.loadMember();
+//		LoginView lv=new LoginView();
+//		boolean flag=dao.loginMovie(id, pw);
+//		if(flag==true) {
+//			new MainView().mainMenu();
+//		}else {
+//			System.out.println("로그인에 실패하였습니다.");
+//			lv.initialView();
+//		}
+//		
+//	}
 	
 	
 

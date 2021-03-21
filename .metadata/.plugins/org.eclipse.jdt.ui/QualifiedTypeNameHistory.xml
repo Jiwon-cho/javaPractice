@@ -11,7 +11,6 @@
     <fullyQualifiedTypeName name="com.kh.practice.chap01_poly.view.LibraryMenu"/>
     <fullyQualifiedTypeName name="com.kh.practice.chap01_poly.model.vo.Book"/>
     <fullyQualifiedTypeName name="review.model.practice.Practice"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"/>
     <fullyQualifiedTypeName name="com.sun.tools.example.debug.expr.ParseException"/>
     <fullyQualifiedTypeName name="java.text.ParseException"/>
@@ -30,14 +29,12 @@
     <fullyQualifiedTypeName name="javax.sql.rowset.CachedRowSet"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="com.generic.model.dao.BookDao"/>
     <fullyQualifiedTypeName name="com.generic.model.vo.Book"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="com.threadtest.controller.RunnableTest"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
@@ -50,14 +47,17 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="kh.model.vo.Book"/>
     <fullyQualifiedTypeName name="movie.model.vo.Member"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
     <fullyQualifiedTypeName name="movie.dao.MovieDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 </qualifiedTypeNameHistroy>

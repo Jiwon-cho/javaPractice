@@ -1,104 +1,75 @@
 package movie.controller;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
+import movie.common.MovieCommon;
+import movie.common.MovieList;
 import movie.dao.MovieDao;
-import movie.model.vo.Movie;
 import movie.view.MainView;
 
-public class MovieController {
-	private static MovieDao dao = MovieDao.getInstance(); 
-	private static ArrayList<Movie> movieList = dao.GetMovieInfo();
-	private static ArrayList<String> genre = dao.GetGenre();
-	public MainView mv=new MainView();
+public class MovieController extends MovieCommon implements MovieList {
+	private static MovieDao dao = MovieDao.getInstance();
+	public MainView mv = new MainView();
+//	private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+//	private Date today=new Date();
+//	private String date=sdf.format(today);
+//	private Calendar c=Calendar.getInstance();
+//	private String time=" "+c.get(Calendar.YEAR)+"년 "+(c.get(Calendar.MONTH)+1)+"월 "+c.get(Calendar.DATE)+"일 "
+//			+(c.get(Calendar.AM_PM)==0?"오전 ":"오후 ")+c.get(Calendar.HOUR)+"시 "+c.get(Calendar.MINUTE)+"분 "
+//			+c.get(Calendar.SECOND)+"초 ";
 
 	Scanner sc = new Scanner(System.in);
-	
+
 	public void MainMovie() {
+		dao.LogLoad();
 		mv.mainMenu(this);
 	}
-	
+
 	public void Search() {
 		mv.search(this);
 	}
-	
+
 	public void searchAll() {
+		String movieList = dao.SearchAll();
+		logList.add("영화 전체검색 기능 사용 "+time);
+		dao.Log(logList);
 		mv.Msg(movieList);
-//		for (Movie movie : movieList) {
-//			System.out.println(movie.toString());
-//		}
 	}
 
 	public void searchName() {
 
-		System.out.println("영화 제목을 적으시오: ");
-		String title = sc.next();
+		String title = mv.SearchName();
+		String movie = dao.SearchName(title);
+		logList.add("이름으로 검색 기능 사용/ "+title+" 검색 "+time);
+		dao.Log(logList);
+		mv.Msg(movie);
 
-		for (int i = 0; i < movieList.size(); i++) {
-			if (movieList.get(i).getTit().contains(title)) {
-				System.out.println(movieList.get(i));
-			}
-		}
 	}
 
 	public void serachGenre() {
-		for (int i = 0; i < genre.size(); i++) {
-			if (i == (genre.size() - 1)) {
-				System.out.println((i+1) + " " + genre.get(i));
-			} else if (((i + 1) % 3) != 0) {
-				System.out.print((i + 1) + " " + genre.get(i) + " ");
-			} else if (((i + 1) % 3) == 0) {
-				System.out.println((i + 1) + " " + genre.get(i));
-			}
-		}
-		System.out.print("장르 번호 선택: ");
-		int a = sc.nextInt();
-		boolean flag = false;
-		for (int i = 0; i < movieList.size(); i++) {
-			if (movieList.get(i).getCate().contains(genre.get(a-1))) {
-				System.out.println(movieList.get(i));
-				flag = true;
-			}
+		int a = mv.SearchGenre();
+		String movie = dao.SearchGenre(a);
+		logList.add("장르로 검색 기능 사용/ "+genre.get(a-1)+" 검색 "+time);
+		dao.Log(logList);
+		mv.Msg(movie);
 
-		}
-		if(flag==false){
-			System.out.println("해당 장르의 영화가 없습니다.");}
 	}
-	
+
 	public void searchRating() {
-		System.out.print("찾고자 하는 평점(대)을 입력하시오: ");
-		double d=sc.nextDouble();
-		int c=(int)d+1;
-		for(int i=0;i<movieList.size();i++) {
-			double a=Double.parseDouble(movieList.get(i).getRating());
-			if(d<=a &&a<c) {
-				System.out.println(movieList.get(i));
-			}
-		}
-		
+		double d = mv.SearchRating();
+		String movie = dao.SearchRating(d);
+		logList.add("평점으로 검색 기능 사용/ "+d+" 평점 검색 "+time);
+		dao.Log(logList);
+		mv.Msg(movie);
+
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void logPrint() {
+		dao.logPrint();
+	}
 	
 	
 	

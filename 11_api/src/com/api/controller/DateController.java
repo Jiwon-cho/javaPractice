@@ -33,12 +33,13 @@ public class DateController {
 		
 		//년, 월 일을 출력하려면
 		//get 메소드를 이용해서 각각 가져와야함.
-		System.out.print(c.get(Calendar.YEAR)+"-"+(c.get(Calendar.MONTH)+1));//반환형이 int
+		System.out.println("오늘 날짜");
+		System.out.print(c.get(Calendar.YEAR)+"-"+(c.get(Calendar.MONTH)+1)+"-"+c.get(Calendar.DATE));//반환형이 int
 		//컴퓨터에서 월을 표시할때 숫자는 0부터 시작,즉 현재 달로 맞추기 위해서는 +1해줘야함
-		System.out.print("-"+c.get(Calendar.DATE));
+		//System.out.print("-"+c.get(Calendar.DATE));
 		
 		//시간
-		System.out.print("-"+c.get(Calendar.AM_PM));
+		System.out.print("-"+(c.get(Calendar.AM_PM)==0?"오전 ":"오후 "));
 		System.out.print("-"+c.get(Calendar.HOUR));
 		System.out.println("-"+c.get(Calendar.MINUTE));
 		int year=c.get(Calendar.YEAR);
@@ -48,7 +49,7 @@ public class DateController {
 		int hour=c.get(Calendar.HOUR);
 		int minute=c.get(Calendar.MINUTE);
 		int second=c.get(Calendar.SECOND);
-		System.out.println(year+"년 "+month+"월 "+date+"일 "+(ampm==0?"오전 ":"오후 ")+hour+":"+minute+":"+second);
+		System.out.println(year+"년 "+(month+1)+"월 "+date+"일 "+(ampm==0?"오전 ":"오후 ")+hour+":"+minute+":"+second);
 		
 		//Calendar 도 SimpleDateFormat 적용하기
 		SimpleDateFormat sdf2=new SimpleDateFormat("yyyy년 MM월 dd일 hh:mm:ss");
