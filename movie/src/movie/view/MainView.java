@@ -26,7 +26,6 @@ public class MainView implements MovieList {
 			System.out.println("1.영화 검색");
 			System.out.println("2.영화 추천");
 			System.out.println("3.로그 출력");
-			System.out.println("4.검색");
 			System.out.println("0.프로그램 종료");
 			System.out.print("메뉴 선택: ");
 			int cho = sc.nextInt();

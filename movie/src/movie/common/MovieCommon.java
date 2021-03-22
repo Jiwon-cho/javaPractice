@@ -15,7 +15,7 @@ public abstract class MovieCommon {
 	public String time=" "+c.get(Calendar.YEAR)+"년 "+(c.get(Calendar.MONTH)+1)+"월 "+c.get(Calendar.DATE)+"일 "
 			+(c.get(Calendar.AM_PM)==0?"오전 ":"오후 ")+c.get(Calendar.HOUR)+"시 "+c.get(Calendar.MINUTE)+"분 "
 			+c.get(Calendar.SECOND)+"초 ";
-	public List<String> logList=new ArrayList<String>();
+	public static List<String> logList=new ArrayList<String>();
 	/**
 	 * @param sdf
 	 * @param today
@@ -36,36 +36,6 @@ public abstract class MovieCommon {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public SimpleDateFormat getSdf() {
-		return sdf;
-	}
-	public void setSdf(SimpleDateFormat sdf) {
-		this.sdf = sdf;
-	}
-	public Date getToday() {
-		return today;
-	}
-	public void setToday(Date today) {
-		this.today = today;
-	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public Calendar getC() {
-		return c;
-	}
-	public void setC(Calendar c) {
-		this.c = c;
-	}
-	public String getTime() {
-		return time;
-	}
-	public void setTime(String time) {
-		this.time = time;
-	}
-
+	
 
 }

@@ -14,5 +14,5 @@ public interface MovieList {
 	static final List<Movie> movieList= MovieDao.getInstance().GetMovieInfo();
 	static final List<String> genre= MovieDao.getInstance().GetGenre();
 	
-	//static final List<String> logList=new ArrayList<String>();
+	
 }

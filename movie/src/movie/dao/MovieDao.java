@@ -22,7 +22,6 @@ public class MovieDao extends MovieCommon implements MovieList {
 	private static String url = "https://movie.naver.com/movie/running/current.nhn#";
 	private static String url2 = "https://movie.naver.com/movie/sdb/browsing/bmovie_genre.nhn";
 	private static MovieDao movieDao;
-	
 
 	private MovieDao() {
 	}
@@ -134,13 +133,6 @@ public class MovieDao extends MovieCommon implements MovieList {
 	}
 
 	public void Log(List<String> a) {
-//		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-//		Date today=new Date();
-//		String date=sdf.format(today);
-//		Calendar c=Calendar.getInstance();
-//		String time=" "+c.get(Calendar.YEAR)+"년 "+(c.get(Calendar.MONTH)+1)+"월 "+c.get(Calendar.DATE)+"일 "
-//				+(c.get(Calendar.AM_PM)==0?"오전 ":"오후 ")+c.get(Calendar.HOUR)+"시 "+c.get(Calendar.MINUTE)+"분 "
-//				+c.get(Calendar.SECOND)+"초 ";
 		try (ObjectOutputStream obo = new ObjectOutputStream(new FileOutputStream(date + " log_msg.txt"))) {
 			obo.writeObject(a);
 		} catch (IOException e) {
@@ -163,9 +155,9 @@ public class MovieDao extends MovieCommon implements MovieList {
 		}
 
 	}
-	
+
 	public void logPrint() {
-		for(String s:logList) {
+		for (String s : logList) {
 			System.out.println(s);
 		}
 	}
