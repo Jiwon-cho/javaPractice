@@ -18,11 +18,11 @@ public class MovieController extends MovieCommon implements MovieList {
 
 	public void MainMovie() {
 		dao.LogLoad();
-		mv.mainMenu(this);
+		mv.mainMenu();
 	}
 
 	public void Search() {
-		mv.search(this);
+		mv.search();
 	}
 
 	public void searchAll() {

@@ -15,8 +15,8 @@ public class MainView implements MovieList {
 		System.out.println("1.로그인");
 	}
 
-	public void mainMenu(MovieController mc) {
-
+	public void mainMenu() {
+		MovieController mc=new MovieController();
 		System.out.println("[TOP 10 영화]");
 		for (int i = 0; i < 10; i++) {
 			System.out.println("" + (i + 1) + ". " + movieList.get(i).getTit());
@@ -49,7 +49,8 @@ public class MainView implements MovieList {
 
 	}
 
-	public void search(MovieController mc) {
+	public void search() {
+		MovieController mc=new MovieController();
 		System.out.println("1.현재 상영영화 전체 검색");
 		System.out.println("2.이름으로 검색");
 		System.out.println("3.평점으로 검색");
@@ -85,7 +86,7 @@ public class MainView implements MovieList {
 
 	public String SearchName() {
 		System.out.println("영화 제목을 적으시오: ");
-		return sc.next();
+		return sc.nextLine();
 
 	}
 
